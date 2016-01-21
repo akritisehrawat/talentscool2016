@@ -1,0 +1,46 @@
+<?php
+
+namespace Stripe;
+
+class ErrorTest extends TestCase
+{
+    public function testCreation()
+    {
+        try {
+            throw new Error\Api(
+                "hello",
+                500,
+                "{'foo':'bar'}",
+                array('foo' => 'bar')
+            );
+            $this->fail("Did not raise error");
+        } catch (Error\Api $e) {
+            $this->assertSame("hello", $e->getMessage());
+            $this->assertSame(500, $e->getHttpStatus());
+            $this->assertSame("{'foo':'bar'}", $e->getHttpBody());
+            $this->assertSame(array('foo' => 'bar'), $e->getJsonBody());
+<<<<<<< HEAD
+            $this->assertSame(null, $e->getHttpHeaders());
+            $this->assertSame(null, $e->getRequestId());
+        }
+    }
+
+    public function testResponseHeaders()
+    {
+        try {
+            throw new Error\Api(
+                "hello",
+                500,
+                "{'foo':'bar'}",
+                array('foo' => 'bar'),
+                array('Request-Id' => 'req_bar')
+            );
+            $this->fail("Did not raise error");
+        } catch (Error\Api $e) {
+            $this->assertSame(array('Request-Id' => 'req_bar'), $e->getHttpHeaders());
+            $this->assertSame('req_bar', $e->getRequestId());
+=======
+>>>>>>> a4954494880de80b002b67374bf830a440e3a926
+        }
+    }
+}
