@@ -1,7 +1,7 @@
 /* Javascript file for adding Parallax effects to welcome page */
 
-$('#window1').parallax({imageSrc: 'img/mountains.jpg'});
-$('#window3').parallax({imageSrc: 'img/mountains.jpg'});
+$('#window1').parallax({imageSrc: 'img/steampunk-city.jpg'});
+$('#window3').parallax({imageSrc: 'img/city.jpg'});
 
 /*For sticky header*/
 $(document).ready(function() {
@@ -26,28 +26,3 @@ $(window).scroll(function() {
     stickyNav();
 });
 });
-
-/*for smooth mouse scroll 
-$(function(){   
-
-        var $window = $(window);
-    var scrollTime = 0.5;
-    var scrollDistance = 170;
-
-    $window.on("mousewheel DOMMouseScroll", function(event){
-
-        event.preventDefault(); 
-
-        var delta = event.originalEvent.wheelDelta/120 || -event.originalEvent.detail/3;
-        var scrollTop = $window.scrollTop();
-        var finalScroll = scrollTop - parseInt(delta*scrollDistance);
-
-        TweenMax.to($window, scrollTime, {
-            scrollTo : { y: finalScroll, autoKill:true },
-                ease: Power1.easeOut,
-                overwrite: 5                            
-            });
-
-    });
-});
-*/
