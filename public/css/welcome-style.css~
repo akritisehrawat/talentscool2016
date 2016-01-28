@@ -274,9 +274,6 @@ footer{
 		padding-top: 4.5em;
 		text-align: left;
 	}
-	.info-box{
-		padding-bottom: 1em;
-	}
 	#window4 p{
 		text-align: left;
 	}
