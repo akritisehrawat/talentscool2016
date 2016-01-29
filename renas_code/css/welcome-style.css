@@ -56,6 +56,7 @@ input{
 	width: 100%;
 }
 .navbar{
+	position: relative;
 	/*background-color: #330000;*/
 	background-color: gray;
 	opacity: .8;
@@ -70,6 +71,7 @@ input{
 }
 
 .navbar a{
+	position: relative;
 	color: white;
 	padding: .6em;
 	font-size: 1.2em;
