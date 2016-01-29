@@ -25,4 +25,22 @@ stickyNav();
 $(window).scroll(function() {
     stickyNav();
 });
+
+$('#welcome_tab').click(function() {
+    $("html, body").animate({scrollTop: 0}, 600);
+});
+
+$('#whatwedo_tab').click(function() {
+    $("html, body").animate({scrollTop: $("#window2").offset().top}, 600);
+});
+
+$('#services_tab').click(function() {
+    $("html, body").animate({scrollTop: $("#window3").offset().top}, 600);
+});
+
+$('#founder_tab').click(function() {
+    $("html, body").animate({scrollTop: $("#window4").offset().top}, 600);
+});
+
+
 });

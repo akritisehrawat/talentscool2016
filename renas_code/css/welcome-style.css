@@ -3,9 +3,7 @@
 	box-sizing:border-box;
 	margin: 0;
 }
-a{
-	text-decoration: none;
-}
+
 ul{
 	padding:0;
 	position: relative;
@@ -65,16 +63,27 @@ input{
 	z-index: 100;
 	text-align: right;
 }
+
+.navbar .content ul {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 0.9em;
+}
+
 .navbar a{
 	color: white;
 	padding: .6em;
 	font-size: 1.2em;
 	z-index: 200;
+	text-decoration: none;
+}
+.navbar a:hover{
+	color: red;
 }
 li{
 	display: inline-block;
 	list-style-type: none;
 }
+
 .plain-window{
 	background-color: #fff;
 	padding: 5em 4em;
