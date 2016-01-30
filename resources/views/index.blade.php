@@ -4,6 +4,9 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Connecting you to talent, opportunities, and services."/>
+	<meta name="google-site-verification" content="MR1iwryrni13r6b5YgHGV_q8_Ws4CsAGVez39Blj7-o" />
+	<meta name="robots" content="NOODP">
     <title>TalentsCool</title>
     <link rel="stylesheet" href="css/welcome-style.css" />
     <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
