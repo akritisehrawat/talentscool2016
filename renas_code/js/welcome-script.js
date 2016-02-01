@@ -31,15 +31,15 @@ $('#welcome_tab').click(function() {
 });
 
 $('#whatwedo_tab').click(function() {
-    $("html, body").animate({scrollTop: $("#window2").offset().top}, 600);
+    $("html, body").animate({scrollTop: $("#window2").position().top}, 600);
 });
 
 $('#services_tab').click(function() {
-    $("html, body").animate({scrollTop: $("#window3").offset().top}, 600);
+    $("html, body").animate({scrollTop: $("#window3").position().top}, 600);
 });
 
 $('#founder_tab').click(function() {
-    $("html, body").animate({scrollTop: $("#window4").offset().top}, 600);
+    $("html, body").animate({scrollTop: $("#window4").position().top}, 600);
 });
 
 
