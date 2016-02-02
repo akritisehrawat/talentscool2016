@@ -29,6 +29,15 @@ html, body {
     src: url(../css/fonts/Genius.otf);
 }
 
+
+#app1 {
+    display: block;
+}
+
+#app2, #app3, #app4, #app5, #app6 {
+    display: none;
+}
+
 .header{
 	background-color: black;
 	padding: 0.6em 0.6em 0.1em
@@ -73,7 +82,8 @@ html, body {
     height: 110px;
 }
 
-.navigation li:first-child {
+.navigation .personal_li, .navigation .talent_li, .navigation .services_li, 
+.navigation .additional_li, .navigation .review_li, .navigation .complete_li {
     color: red;
     border-color: red;
 }
