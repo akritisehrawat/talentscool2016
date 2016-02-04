@@ -10,7 +10,7 @@ ul{
 	z-index: 201;
 }
 /* search bar and login buttons, hidden for now */
-input{
+.header input{
 	display: none;
 }
 .user-entry{
