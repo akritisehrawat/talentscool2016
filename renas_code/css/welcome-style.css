@@ -151,6 +151,34 @@ li{
 	position: relative;
 	top: -64px;
 }
+
+#window3 .content ul {
+    height: 100%;
+    list-style: outside none none;
+}
+
+#window3 .content ul li {
+    width: 19.7%
+}
+
+#window3 .above {
+    border: 1px white solid;
+    height: 285px;
+    max-height: 285px;
+    text-align: center;
+    float: left;
+}
+
+
+#window3 .above h3, #window3 .above h4, #window3 .above h5 {
+    padding: 1em;
+    font-family: 'Quicksand', sans-serif;
+}
+
+#window3 .above h4 {
+    font-style: italic;
+}
+
 #window3{
 	position: relative;
 	/*top: -74px;*/
@@ -282,7 +310,7 @@ footer{
 		padding-left: 1em;
 	}
 	#window3 .content{
-		padding: 5em 6em;
+		/*padding: 5em 6em;*/
 	}
 	#window3 h2{
 		font-size: 3em;

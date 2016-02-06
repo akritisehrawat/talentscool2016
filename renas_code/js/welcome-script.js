@@ -56,5 +56,4 @@ $('#founder_tab').click(function() {
     $("html, body").animate({scrollTop: $("#window4").offset().top}, 600);
 });
 
-
 });
