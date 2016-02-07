@@ -324,8 +324,9 @@ footer{
 
 	.plain-window{
 		background-color: #fff;
-		/*padding: 10em 6em;*/
-		padding: 4em 6em 2em;
+		/*padding: 10em 6em;
+		padding: 4em 6em 2em;*/
+		padding: 3em;
 		color: #999999;
 	}
 	.plain-window h3{
