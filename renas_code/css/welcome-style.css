@@ -278,7 +278,7 @@ li{
 }
 footer{
 	/*background-color: #330000;*/
-	background-color: gray;
+	background-color: #000;
 	padding: 2em;
 	color: #fff;
 	text-align: center;
@@ -302,14 +302,14 @@ footer{
 	height: 13.95em;
 }
 
-/* ---- [ 24.6em (393.6px and up, slightly larger phone)]---- */
-@media only screen and (max-width: 28em){
-	#welcome_tab{
+/* ---- [ 36em (576px and down, for phones)]---- */
+@media only screen and (max-width: 36em){
+	.navbar nav{
 		display: none;
 	}
 }
-/* ----[ 37em (592px and up, computer screen)]---- */
-@media only screen and (min-width: 37em){
+/* ----[ 50em (800px and up, computer screen)]---- */
+@media only screen and (min-width: 50em){
 	.header h1{
 		padding-right: .5em;
 		display: inline-block;
@@ -386,6 +386,10 @@ footer{
 	#window4{
 		padding-top: 4.5em;
 		text-align: left;
+	}
+	#window5{
+		font-size: 1em;
+		padding-top: 5em;
 	}
 	#window5 .content{
 		padding-left: 2em;

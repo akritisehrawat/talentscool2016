@@ -61,4 +61,8 @@ $('#founder_tab').click(function() {
     $("html, body").animate({scrollTop: $("#window4").offset().top}, 600);
 });
 
+$('#contactus_tab').click(function() {
+	$("html, body").animate({scrollTop: $("#window5").offset().top}, 600);
+});
+
 });
