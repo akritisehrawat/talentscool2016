@@ -302,14 +302,14 @@ footer{
 	height: 13.95em;
 }
 
-/* ---- [ 30em (480px and up, slightly larger phone)]---- */
-@media only screen and (max-width: 30em){
+/* ---- [ 36em (576px and down, for phones)]---- */
+@media only screen and (max-width: 36em){
 	.navbar nav{
 		display: none;
 	}
 }
-/* ----[ 37em (592px and up, computer screen)]---- */
-@media only screen and (min-width: 37em){
+/* ----[ 50em (800px and up, computer screen)]---- */
+@media only screen and (min-width: 50em){
 	.header h1{
 		padding-right: .5em;
 		display: inline-block;
