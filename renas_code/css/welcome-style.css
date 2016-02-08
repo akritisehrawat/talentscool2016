@@ -402,6 +402,9 @@ footer{
 		padding-top: 4.5em;
 		text-align: left;
 	}
+	#window5{
+		font-size: 1em;
+	}
 	#window5 .content{
 		padding-left: 2em;
 		padding-right: 2em;
