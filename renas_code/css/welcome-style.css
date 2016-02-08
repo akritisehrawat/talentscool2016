@@ -278,7 +278,7 @@ li{
 }
 footer{
 	/*background-color: #330000;*/
-	background-color: gray;
+	background-color: #000;
 	padding: 2em;
 	color: #fff;
 	text-align: center;
@@ -302,9 +302,9 @@ footer{
 	height: 13.95em;
 }
 
-/* ---- [ 24.6em (393.6px and up, slightly larger phone)]---- */
-@media only screen and (max-width: 28em){
-	#welcome_tab{
+/* ---- [ 30em (480px and up, slightly larger phone)]---- */
+@media only screen and (max-width: 30em){
+	.navbar nav{
 		display: none;
 	}
 }
@@ -386,6 +386,10 @@ footer{
 	#window4{
 		padding-top: 4.5em;
 		text-align: left;
+	}
+	#window5{
+		font-size: 1em;
+		padding-top: 5em;
 	}
 	#window5 .content{
 		padding-left: 2em;
