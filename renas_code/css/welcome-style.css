@@ -308,6 +308,22 @@ footer{
 		display: none;
 	}
 }
+
+/* ---- [ 30em (480px and up, slightly larger phone)]---- */
+@media only screen and (max-width: 37em){
+	#sobelow {
+	    display: none;
+	}
+	
+	#window3 .content ul li {
+        width: 100%
+    }
+
+	#asabove p {
+	    padding: 1em;
+	}
+}
+
 /* ----[ 37em (592px and up, computer screen)]---- */
 @media only screen and (min-width: 37em){
 	.header h1{
