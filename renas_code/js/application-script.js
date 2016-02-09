@@ -1,5 +1,5 @@
 $('.navigation li:nth-child(1)').click(function() {
-    //alert("clicked first");
+    alert("clicked first");
     document.getElementById("app1").style.display = "block";
     document.getElementById("app2").style.display = "none";
     document.getElementById("app3").style.display = "none";
