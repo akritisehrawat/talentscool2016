@@ -307,3 +307,13 @@ footer{
 	text-align: center;
 	font-family: 'Quicksand', sans-serif;
 }
+
+/* styles for thank you page */
+.content{
+    padding: 8em;
+    font-family: 'Quicksand', sans-serif;
+}
+.content h2{
+    padding-bottom: 1em;
+    font-size: 2em;
+}
