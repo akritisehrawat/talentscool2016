@@ -11,7 +11,7 @@
 </head>
 
 <body>
-
+	
     <div class="header">
         <div>
             <h1><a href="index.html"><img src="images/TSVector.png"></a></h1>
@@ -20,6 +20,7 @@
 
 
     <div id="app1">
+		<form id = "myform" action = "testsql.php" method = "post">
         <div class="app_heading">
             <h1>
                 Application
@@ -61,80 +62,82 @@
                 <label>
                     First Name
                 </label>
-                <input type="text" class="left" autocomplete="off" placeholder="First Name" required></input>
+                <input type="text" name = "fname" class="left" autocomplete="off" placeholder="First Name" required></input>
             </p>
             <p>
                 <label>
                     Last Name
                 </label>
-                <input type="text" class="right" autocomplete="off" placeholder="Last Name" required></input>
+                <input type="text" name = "lname" class="right" autocomplete="off" placeholder="Last Name" required></input>
             </p>
             <p>
                 <label>
                     E-mail
                 </label>
-                <input type="text" class="left" autocomplete="off" placeholder="E-mail" required></input>
+                <input type="text" name = "email" class="left" autocomplete="off" placeholder="E-mail" required></input>
             </p>
             <p>
                 <label>
                     Phone Number
                 </label>
-                <input type="text" class="right" autocomplete="off" placeholder="Phone Number" required></input>
+                <input type="text" name = "phone" class="right" autocomplete="off" placeholder="Phone Number" required></input>
             </p>
             <p>
                 <label>
                     Country
                 </label>
-                <input type="text" class="left" autocomplete="off" placeholder="Country" required></input>
+                <input type="text" name = "country" class="left" autocomplete="off" placeholder="Country" required></input>
             </p>
             <p>
                 <label>
                     State
                 </label>
-                <input type="text" class="right" autocomplete="off" placeholder="State" required></input>
+                <input type="text" name = "state" class="right" autocomplete="off" placeholder="State" required></input>
             </p>
             <p>
                 <label>
                     City
                 </label>
-                <input type="text" class="left" autocomplete="off" placeholder="City" required></input>
+                <input type="text" name ="city" class="left" autocomplete="off" placeholder="City" required></input>
             </p>
             <p>
                 <label>
                     Zip Code
                 </label>
-                <input type="text" class="right" autocomplete="off" placeholder="Zip Code" required></input>
+                <input type="text" name = "zip" class="right" autocomplete="off" placeholder="Zip Code" required></input>
             </p>
             <p>
                 <label>
                     Date of Birth
                 </label>
-                <input type="text" class="left" autocomplete="off" placeholder="Date of Birth" required></input>
+                <input type="text" name ="dob" class="left" autocomplete="off" placeholder="Date of Birth" required></input>
             </p>
             <p>
                 <label>
                     Gender
                 </label>
-                <input type="text" class="right" autocomplete="off" placeholder="Gender" required></input>
+                <input type="text" name = "gender" class="right" autocomplete="off" placeholder="Gender" required></input>
             </p>
             <p>
                 <label>
                     Profile Photo
                 </label>
-                <input type="text" class="left" autocomplete="off" placeholder="Profile Photo" required></input>
+                <input type="text" name = "dp" class="left" autocomplete="off" placeholder="Profile Photo" required></input>
             </p>
         </div>
     
-        <div class="buttons_container">
+     <div class="buttons_container">
             <div class="buttons">
                 <button class="next-button">
                     Next
-                </button>
-            </div>
+	            </button>
+	        </div>
         </div>
-
+		<input type= "submit" value='click here'>
     </div>
-
+	</form>
+				
+	
     <!------------------------------------------------------------------------------------------------------------>
 
     <div id="app2">
@@ -393,13 +396,16 @@
                 <button class="prev-button">
                     Previous
                 </button>
-                <button class="submit-button">
+           
+   <button class="submit-button" on>
                     Submit
                 </button>
+			
             </div>
         </div>
     </div>
-
+		
+    
 <!------------------------------------------------------------------------------------------------------------>
 		<footer>
 			<div class="social-media-bar">
