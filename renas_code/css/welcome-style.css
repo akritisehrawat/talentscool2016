@@ -541,7 +541,11 @@ footer{
     height:100%;
     opacity:1;
 }
-
+#thanksimg{
+	background-color:black;
+	height: 40%;
+	width: 40%;
+}
 
 
 }
