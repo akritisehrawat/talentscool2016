@@ -406,6 +406,7 @@ footer{
 	}
 	#window3 .content{
 		/*padding: 5em 6em;*/
+		padding-top: 1.5em;
 	}
 	#window3 h2{
 		font-size: 3em;
