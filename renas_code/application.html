@@ -86,19 +86,19 @@
                 <label>
                     Country
                 </label>
-                <input type="text" name = "country" class="left" autocomplete="off" placeholder="Country" required></input>
+                <select id="country" name="country" placeholder="Country" required></select>
             </p>
             <p>
                 <label>
                     State
                 </label>
-                <input type="text" name = "state" class="right" autocomplete="off" placeholder="State" required></input>
+                <select id="state" name="state" placeholder="State" required></select>
             </p>
             <p>
                 <label>
                     City
                 </label>
-                <input type="text" name ="city" class="left" autocomplete="off" placeholder="City" required></input>
+                <input type="text" name="city" class="left" autocomplete="off" placeholder="City" required></input>
             </p>
             <p>
                 <label>
@@ -110,19 +110,19 @@
                 <label>
                     Date of Birth
                 </label>
-                <input type="text" name ="dob" class="left" autocomplete="off" placeholder="Date of Birth" required></input>
+                <input type="text" name ="dob" class="left" autocomplete="off" placeholder="Date of Birth" onclick="this.placeholder='MM/DD/YYYY';" required></input>
             </p>
             <p>
                 <label>
                     Gender
                 </label>
-                <input type="text" name = "gender" class="right" autocomplete="off" placeholder="Gender" required></input>
+                <select name="gender" id="gender" class="right" autocomplete="off" required></select>
             </p>
-            <p>
+            <p id="profile_photo">
                 <label>
                     Profile Photo
                 </label>
-                <input type="text" name = "dp" class="left" autocomplete="off" placeholder="Profile Photo" required></input>
+                <input type="file" style="margin-right: 140px;" name = "dp" class="left" autocomplete="off" placeholder="Profile Photo" required></input>
             </p>
         </div>
     
@@ -190,25 +190,25 @@
                 <label>
                     Specific Talent
                 </label>
-                <input type="text" autocomplete="off" placeholder="Specific Talent*" required></input>
+                <input type="text" autocomplete="off" placeholder="Specific Talent" required></input>
             </p>
-            <p>
+            <p id="portfolio"  style="padding-bottom: 0px;">
                 <label>
                     Portfolio
                 </label>
-                <input type="text" autocomplete="off" placeholder="Portfolio" required></input>
+                <input type="file" style="margin-right: 530px;" autocomplete="off" placeholder="Portfolio" required></input>
             </p>
-            <p>
+            <p id="portfolio" style="padding-bottom: 0px;">
                 <label>
                     Audio
                 </label>
-                <input type="text" autocomplete="off" placeholder="Audio" required></input>
+                <input type="file" style="margin-right: 530px;" autocomplete="off" placeholder="Audio" required></input>
             </p>
-            <p>
+            <p id="portfolio"  style="padding-bottom: 0px;">
                 <label>
                     Video
                 </label>
-                <input type="text" autocomplete="off" placeholder="Video" required></input>
+                <input type="file" style="margin-right: 530px;" autocomplete="off" placeholder="Video" required></input>
             </p>
         </div>
     
@@ -422,5 +422,6 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="js/application-script.js"></script>
-
-
+<script src="js/countries.js"></script>
+<script language="javascript">populateCountries("country", "state");</script>
+<script language="javascript">populateGender();</script>

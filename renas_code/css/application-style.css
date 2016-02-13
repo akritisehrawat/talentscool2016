@@ -160,15 +160,6 @@ html, body {
     display: none;
 }
 
-input[type="text"] {
-    float: right;
-    margin-right: 29%;
-    font-size: 18px;
-    border: solid 3px #c9c9c9;
-    transition: border 0.3s;
-    font-family: Tenso;
-}
-
 
 #app1 .info .left, #app4 .info .left {
     float: right;
@@ -193,6 +184,43 @@ input[type="text"] {
 
 input[type="text"]:focus, input[type="text"].focus {
     border: solid 5px #969696;
+}
+
+input[type="text"], input[type="file"], select {
+    float: right;
+    margin-right: 29%;
+    font-size: 18px;
+    border: solid 3px #c9c9c9;
+    transition: border 0.3s;
+    font-family: Tenso;
+}
+
+input[type="file"] {
+    color: transparent; 
+    width: 97px; 
+}
+
+select {
+    margin-right: 0;
+    width: 46%;
+    overflow-x: hidden;
+}
+
+#profile_photo, #portfolio {
+    text-align: right;
+    padding-bottom: 0px;
+}
+
+#profile_photo label, #portfolio label {
+    display: inline; 
+    font-family: Tenso; 
+    font-size: 19px; 
+    margin-right: 6px;
+}
+
+#state {
+    float: left;
+    margin-left: -2px;
 }
 
 .buttons_container {

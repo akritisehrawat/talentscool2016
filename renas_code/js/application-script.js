@@ -73,3 +73,10 @@ $('#app4 .prev-button').click(function() {
     document.getElementById("app3").style.display = "block";
     document.getElementById("app4").style.display = "none";
 });
+
+function populateGender() {
+    var gender = document.getElementById("gender");
+    gender.options[0] = new Option('Select Gender','-1');
+    gender.options[1] = new Option('Male','0');
+    gender.options[2] = new Option('Female','1');
+}
