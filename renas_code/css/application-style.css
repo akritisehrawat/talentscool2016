@@ -225,7 +225,7 @@ select {
 }
 
 #profile_photo, #portfolio {
-    text-align: right;
+    text-align: left;
     padding-bottom: 0px;
 }
 

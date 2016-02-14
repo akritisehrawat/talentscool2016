@@ -138,11 +138,69 @@ function validateDOB(dob_id) {
 }
 
 
+function validateImage(image_id) {
+    var photo = document.getElementById(image_id);
+    var path = photo.value;
+    var extension = path.split('.').pop();
+    //alert(extension);
+    
+    if((extension == "gif") || (extension == "png") || (extension == "bmp") || (extension == "jpeg") || (extension == "jpg")) {
+        //valid extensions
+        //alert("valid extension");
+        //do nothing, all's well
+    }
+    
+    else {
+        alert("Invalid Extension for Images");
+        photo.value = "";
+    }
+    
+}
 
 
 
 
+function validateVideo(video_id) {
+    var video = document.getElementById(video_id);
+    var path = video.value;
+    var extension = path.split('.').pop();
+    //alert(extension);
+    
+    if((extension == "flv") || (extension == "gif") || (extension == "avi") || (extension == "mov") || (extension == "wmv")
+    || (extension == "mp4") || (extension == "mpg") || (extension == "mp2") || (extension == "mpeg") || (extension == "mpe") 
+    || (extension == "mpv") || (extension == "m4v")) {
+        //valid extensions
+        //alert("valid extension");
+        //do nothing, all's well
+    }
+    
+    else {
+        alert("Invalid Extension for Video");
+        video.value = "";
+    }
+    
+}
 
+
+
+function validateAudio(audio_id) {
+    var audio = document.getElementById(audio_id);
+    var path = audio.value;
+    var extension = path.split('.').pop();
+    //alert(extension);
+    
+    if((extension == "aac") || (extension == "wav") || (extension == "wma") || (extension == "mp3") || (extension == "mp4")) {
+        //valid extensions
+        //alert("valid extension");
+        //do nothing, all's well
+    }
+    
+    else {
+        alert("Invalid Extension for Audio");
+        audio.value = "";
+    }
+    
+}
 
 
 

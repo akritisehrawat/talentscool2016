@@ -122,7 +122,7 @@
                 <label>
                     Profile Photo
                 </label>
-                <input type="file" style="margin-right: 100px;" name = "dp" class="left" autocomplete="off" placeholder="Profile Photo" required></input>
+                <input type="file" id="profile_image" onchange="validateImage('profile_image');" style="margin-right: 100px;" name = "dp" class="left" autocomplete="off" placeholder="Profile Photo" required></input>
             </p>
         </div>
     
@@ -196,19 +196,19 @@
                 <label>
                     Portfolio
                 </label>
-                <input type="file" style="margin-right: 512px;" autocomplete="off" placeholder="Portfolio" required></input>
+                <input type="file" id="portfolio_image" onchange="validateImage('portfolio_image');" style="margin-right: 512px;" autocomplete="off" placeholder="Portfolio" required></input>
             </p>
             <p id="portfolio" style="padding-bottom: 0px;">
                 <label>
                     Audio
                 </label>
-                <input type="file" style="margin-right: 512px;" autocomplete="off" placeholder="Audio" required></input>
+                <input type="file" id="audio" onchange="validateAudio('audio');" style="margin-right: 512px;" autocomplete="off" placeholder="Audio" required></input>
             </p>
             <p id="portfolio"  style="padding-bottom: 0px;">
                 <label>
                     Video
                 </label>
-                <input type="file" style="margin-right: 512px;" autocomplete="off" placeholder="Video" required></input>
+                <input type="file" id="video" onchange="validateVideo('video');" style="margin-right: 512px;" autocomplete="off" placeholder="Video" required></input>
             </p>
         </div>
     
