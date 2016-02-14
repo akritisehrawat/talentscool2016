@@ -79,4 +79,6 @@ function populateGender() {
     gender.options[0] = new Option('Select Gender','-1');
     gender.options[1] = new Option('Male','0');
     gender.options[2] = new Option('Female','1');
+    gender.options[3] = new Option('Other','2');
+    gender.options[4] = new Option('Prefer Not To Say','3');
 }
