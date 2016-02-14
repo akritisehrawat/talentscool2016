@@ -82,3 +82,84 @@ function populateGender() {
     gender.options[3] = new Option('Other','2');
     gender.options[4] = new Option('Prefer Not To Say','3');
 }
+
+function add_link() {
+    //alert("in add links");
+    document.getElementById("add_links").innerHTML+= '<p><input type="text" focused autocomplete="off" placeholder="New Link" required></input></p>';
+}
+
+function countChars() {
+    var ta = document.getElementById("describe");
+    if(ta.value.length > 1000) {
+        ta.value = ta.value.substring(0, 1000);
+    }
+}
+
+
+function validateName(name_id) {
+    //alert("validateName");
+    var regex = /^[A-Za-z]+$/;
+    var name = document.getElementById(name_id);
+    if(!regex.test(name.value)) {
+        alert("Name cannot contain numbers");
+        name.value = "";
+    }
+}
+
+
+function validateEmail(email_id) {
+    //alert("validateEmail");
+    var regex = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+    var email = document.getElementById(email_id);
+    if(!regex.test(email.value)) {
+        alert("Invalid E-mail");
+        email.value = "";
+    }
+}
+
+function validatePhone(phone_id) {
+    //alert("validatePhone");
+    var regex = /^(\()?\d{3}(\))?(-|\s)?\d{3}(-|\s)\d{4}$/;
+    var phone = document.getElementById(phone_id);
+    if(!regex.test(phone.value)) {
+        alert("Invalid Phone Number");
+        phone.value = "";
+    }
+}
+
+function validateDOB(dob_id) {
+    //alert("validateDOB");
+    var regex = /^(0[1-9]|1[0-2])\/(0[1-9]|1\d|2\d|3[01])\/(19|20)\d{2}$/;
+    var dob = document.getElementById(dob_id);
+    if(!regex.test(dob.value)) {
+       alert("Invalid Date of Birth");
+       dob.value = "";
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

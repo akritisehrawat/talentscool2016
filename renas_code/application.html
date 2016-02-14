@@ -62,25 +62,25 @@
                 <label>
                     First Name
                 </label>
-                <input type="text" class="left" autocomplete="off" placeholder="First Name*" required></input>
+                <input onchange="validateName('first_name');" id="first_name" type="text" class="left" autocomplete="off" placeholder="First Name*" required></input>
             </p>
             <p>
                 <label>
                     Last Name
                 </label>
-                <input type="text" class="right" autocomplete="off" placeholder="Last Name*" required></input>
+                <input onchange="validateName('last_name');" id="last_name" type="text" class="right" autocomplete="off" placeholder="Last Name*" required></input>
             </p>
             <p>
                 <label>
                     E-mail
                 </label>
-                <input type="text" class="left" autocomplete="off" placeholder="E-mail*" required></input>
+                <input onchange="validateEmail('email');" id="email" type="text" class="left" autocomplete="off" placeholder="E-mail*" required></input>
             </p>
             <p>
                 <label>
                     Phone Number
                 </label>
-                <input type="text" class="right" autocomplete="off" placeholder="Phone Number" required></input>
+                <input onchange="validatePhone('phone');" id="phone" type="text" class="right" onclick="this.placeholder='(_ _ _) _ _ _ - _ _ _ _';" autocomplete="off" placeholder="Phone Number" required></input>
             </p>
             <p>
                 <label>
@@ -110,7 +110,7 @@
                 <label>
                     Date of Birth
                 </label>
-                <input type="text" name ="dob" class="left" autocomplete="off" placeholder="Date of Birth" onclick="this.placeholder='MM/DD/YYYY';" required></input>
+                <input onchange="validateDOB('dob');" id="dob" type="text" name ="dob" class="left" autocomplete="off" placeholder="Date of Birth" onclick="this.placeholder='MM/DD/YYYY';" required></input>
             </p>
             <p>
                 <label>
@@ -269,18 +269,21 @@
         </div>
     
         <div class="info"> 
-            <p>
+            <p style="margin-bottom: 10em;">
                 <label>
                     Describe Yourself
                 </label>
-                <input type="text" autocomplete="off" placeholder="Describe Yourself*" required></input>
+                <textarea id="describe" autocomplete="off" rows="12" placeholder="Describe Yourself (max 1000 characters)*" oninput="countChars();" required></textarea>
             </p>
-            <p>
-                <label>
-                    Personal Web/Social Media
-                </label>
-                <input type="text" autocomplete="off" placeholder="Personal Web/Social Media" required></input>
-            </p>
+            <div id="add_links">
+                <p>
+                    <label>
+                        Personal Web/Social Media
+                    </label>
+                    <input type="text" autocomplete="off" placeholder="Personal Web/Social Media" required></input>
+                    <button onclick="add_link();">Add Links</button>
+                </p>
+            </div>
             <p>
                 <label>
                     Experiences (Accomplishments)
@@ -357,7 +360,7 @@
                 <label>
                     Opportunities
                 </label>
-                <input type="text" class="left" autocomplete="off" placeholder="Opportunities" required></input>
+                <input type="text" class="left" autocomplete="off" placeholder="Opportunities*" required></input>
             </p>
             <p>
                 <label>
