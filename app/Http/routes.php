@@ -26,7 +26,8 @@ Route::post('clients/requested/accept/', 'ClientController@acceptClient');
 Route::post('Tags', 'TagController@store');
 Route::put('Tags', 'TagController@delete');
 Route::get('subscribe', 'SubscribeController@index');
-
+//added by mohit
+Route::get('testmysql','WelcomeController@testsql');
 Route::get('application', 'ApplicationController@application');
 Route::get('loading', 'ApplicationController@loading');
 Route::get('thanks', 'ApplicationController@thanks');
