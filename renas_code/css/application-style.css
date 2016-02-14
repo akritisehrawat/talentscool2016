@@ -213,8 +213,9 @@ textarea {
 }
 
 input[type="file"] {
-    color: transparent; 
-    width: 97px; 
+/*     color: transparent;  */
+    width: 200px; 
+    font-size: 15px;
 }
 
 select {

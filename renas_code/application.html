@@ -62,13 +62,13 @@
                 <label>
                     First Name
                 </label>
-                <input onchange="validateName('first_name');" id="first_name" type="text" class="left" autocomplete="off" placeholder="First Name*" required></input>
+                <input onchange="validateText('first_name');" id="first_name" type="text" class="left" autocomplete="off" placeholder="First Name*" required></input>
             </p>
             <p>
                 <label>
                     Last Name
                 </label>
-                <input onchange="validateName('last_name');" id="last_name" type="text" class="right" autocomplete="off" placeholder="Last Name*" required></input>
+                <input onchange="validateText('last_name');" id="last_name" type="text" class="right" autocomplete="off" placeholder="Last Name*" required></input>
             </p>
             <p>
                 <label>
@@ -98,7 +98,7 @@
                 <label>
                     City
                 </label>
-                <input type="text" name="city" class="left" autocomplete="off" placeholder="City" required></input>
+                <input type="text" onchange="validateText('city');" id="city" name="city" class="left" autocomplete="off" placeholder="City" required></input>
             </p>
             <p>
                 <label>
@@ -122,7 +122,7 @@
                 <label>
                     Profile Photo
                 </label>
-                <input type="file" style="margin-right: 140px;" name = "dp" class="left" autocomplete="off" placeholder="Profile Photo" required></input>
+                <input type="file" style="margin-right: 100px;" name = "dp" class="left" autocomplete="off" placeholder="Profile Photo" required></input>
             </p>
         </div>
     
@@ -184,31 +184,31 @@
                 <label>
                     Talent Category
                 </label>
-                <input type="text" autocomplete="off" placeholder="Talent Category*" required></input>
+                <input type="text" id="talent_category" onchange="validateText('talent_category');"  autocomplete="off" placeholder="Talent Category*" required></input>
             </p>
             <p>
                 <label>
                     Specific Talent
                 </label>
-                <input type="text" autocomplete="off" placeholder="Specific Talent" required></input>
+                <input type="text" id="specific_talent" onchange="validateText('specific_talent');"  autocomplete="off" placeholder="Specific Talent" required></input>
             </p>
             <p id="portfolio"  style="padding-bottom: 0px;">
                 <label>
                     Portfolio
                 </label>
-                <input type="file" style="margin-right: 530px;" autocomplete="off" placeholder="Portfolio" required></input>
+                <input type="file" style="margin-right: 512px;" autocomplete="off" placeholder="Portfolio" required></input>
             </p>
             <p id="portfolio" style="padding-bottom: 0px;">
                 <label>
                     Audio
                 </label>
-                <input type="file" style="margin-right: 530px;" autocomplete="off" placeholder="Audio" required></input>
+                <input type="file" style="margin-right: 512px;" autocomplete="off" placeholder="Audio" required></input>
             </p>
             <p id="portfolio"  style="padding-bottom: 0px;">
                 <label>
                     Video
                 </label>
-                <input type="file" style="margin-right: 530px;" autocomplete="off" placeholder="Video" required></input>
+                <input type="file" style="margin-right: 512px;" autocomplete="off" placeholder="Video" required></input>
             </p>
         </div>
     
@@ -360,37 +360,37 @@
                 <label>
                     Opportunities
                 </label>
-                <input type="text" class="left" autocomplete="off" placeholder="Opportunities*" required></input>
+                <input type="text" id="opportunities" onchange="validateText('opportunities');"  class="left" autocomplete="off" placeholder="Opportunities*" required></input>
             </p>
             <p>
                 <label>
                     Representation
                 </label>
-                <input type="text" class="right" autocomplete="off" placeholder="Representation" required></input>
+                <input type="text" id="representation" onchange="validateText('representation');"  class="right" autocomplete="off" placeholder="Representation" required></input>
             </p>
             <p>
                 <label>
                     Talent Development
                 </label>
-                <input type="text" class="left" autocomplete="off" placeholder="Talent Development" required></input>
+                <input type="text" id="talent_development" onchange="validateText('talent_development');"  class="left" autocomplete="off" placeholder="Talent Development" required></input>
             </p>
             <p>
                 <label>
                     General Services
                 </label>
-                <input type="text" class="right" autocomplete="off" placeholder="General Services" required></input>
+                <input type="text" id="general_services" onchange="validateText('general_services');" class="right" autocomplete="off" placeholder="General Services" required></input>
             </p>
             <p>
                 <label>
                     Vanity & Luxury Services
                 </label>
-                <input type="text" class="left" autocomplete="off" placeholder="Vanity & Luxury Services" required></input>
+                <input type="text" id="vanity" onchange="validateText('vanity');"  class="left" autocomplete="off" placeholder="Vanity & Luxury Services" required></input>
             </p>
             <p>
                 <label>
                     Additional Requests
                 </label>
-                <input type="text" class="right" autocomplete="off" placeholder="Additional Requests" required></input>
+                <input type="text" id="additional" onchange="validateText('additional');"  class="right" autocomplete="off" placeholder="Additional Requests" required></input>
             </p>
         </div>
     

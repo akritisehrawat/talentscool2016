@@ -96,12 +96,12 @@ function countChars() {
 }
 
 
-function validateName(name_id) {
+function validateText(name_id) {
     //alert("validateName");
     var regex = /^[A-Za-z]+$/;
     var name = document.getElementById(name_id);
     if(!regex.test(name.value)) {
-        alert("Name cannot contain numbers");
+        alert("This cannot contain numbers or special characters");
         name.value = "";
     }
 }
