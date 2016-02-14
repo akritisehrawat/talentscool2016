@@ -269,6 +269,17 @@ button:onclick, button.active {
     cursor: progress;
 }
 
+.submit-button{
+    background-color: #c96464;
+}
+
+.submit-button:hover{
+    background-color: #6d2727;
+}
+
+.submit-button:active{
+    background-color: #6d2727;
+}
 .social-media-bar {
 	text-align: center;
 	padding: 1em 0;
