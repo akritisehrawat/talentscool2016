@@ -33,6 +33,7 @@ Route::get('loading', 'ApplicationController@loading');
 Route::get('thanks', 'ApplicationController@thanks');
 Route::get('error', 'ApplicationController@error');
 Route::post('application', 'ApplicationController@store');
+Route::post('testapplication', 'TestApplicaitonController@testsql');
 
 Route::get('admin/invite', 'AdminController@invite');
 Route::post('admin/invite', 'AdminController@sendInvite');
