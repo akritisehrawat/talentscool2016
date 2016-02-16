@@ -204,7 +204,14 @@ function validateAudio(audio_id) {
 
 
 
-
+jQuery(function($) {
+//     var $j = jQuery.noConflict();
+//     $j("#dob").datepicker();
+    $("#dob").datepicker({
+      changeMonth: true,
+      changeYear: true
+    });
+});
 
 
 
