@@ -263,6 +263,25 @@ select {
     margin-left: -2px;
 }
 
+#ui-datepicker-div {
+    border: solid 5px #969696;
+    background-color: lightgray;
+    font-family: Tenso;
+    left: 461.783px !important;
+}
+
+#ui-datepicker-div select {
+    width: 75px;
+}
+
+#ui-datepicker-div .ui-datepicker-year {
+    float: left;
+}
+
+.ui-datepicker-header a {
+    display: none;
+}
+
 .buttons_container {
     width: 100%;
     text-align: center;
