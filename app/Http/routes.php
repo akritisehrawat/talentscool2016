@@ -26,14 +26,19 @@ Route::post('clients/requested/accept/', 'ClientController@acceptClient');
 Route::post('Tags', 'TagController@store');
 Route::put('Tags', 'TagController@delete');
 Route::get('subscribe', 'SubscribeController@index');
-//added by mohit
-Route::get('testmysql','WelcomeController@testsql');
+
 Route::get('application', 'ApplicationController@application');
 Route::get('loading', 'ApplicationController@loading');
 Route::get('thanks', 'ApplicationController@thanks');
 Route::get('error', 'ApplicationController@error');
 Route::post('application', 'ApplicationController@store');
-Route::post('testapplication', 'TestApplicaitonController@testsql');
+//added by mohit
+Route::get('testmysql','WelcomeController@testsql');
+//why can't i use a post here? kek
+Route::get('testapplication', 'TestApplicaitonController@testsql');
+//ooga chaka ooga ooga ooga chaka ooga ooga, i can't stop this feeling
+Route::get('bleh','TestApplicaitonController@appview');
+Route::post('formSubmit', 'TestApplicaitonController@ssdd');
 
 Route::get('admin/invite', 'AdminController@invite');
 Route::post('admin/invite', 'AdminController@sendInvite');

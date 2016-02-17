@@ -66,7 +66,7 @@ class WelcomeController extends Controller {
 	public function testsql()
 	{
 		//gets the 
-		$results = DB::select('select * from clients');
+		$results = DB::select('select * from client_info');
 		echo '<table border ="2"><tr><th>First Name</th><th>Last Name</th><th>E-mail</th><th>City</th><th>State</th><th>Zipcode</th><th>Gender</th></tr>';
     	foreach ($results as $result)
     	{
