@@ -14,10 +14,7 @@
 </head>
 
 <body>
-  <div>
-    <a>{!! HTML::link("formSubmit", "Submit") !!}
-    </a>
-    </div>
+  
     <div class="header">
 
     </div>
@@ -76,19 +73,19 @@
                 <label>
                     Last Name
                 </label>
-                <input onchange="validateText('last_name');" id="last_name" type="text" class="right" autocomplete="off" placeholder="Last Name*" ></input>
+                <input onchange="validateText('last_name');" name = "ln" id="ln" type="text" class="right" autocomplete="off" placeholder="Last Name*" ></input>
             </p>
             <p>
                 <label>
                     E-mail
                 </label>
-                <input onchange="validateEmail('email');" id="email" type="text" class="left" autocomplete="off" placeholder="E-mail*" ></input>
+                <input onchange="validateEmail('email');" name = "email" id="email" type="text" class="left" autocomplete="off" placeholder="E-mail*" ></input>
             </p>
             <p>
                 <label>
                     Phone Number
                 </label>
-                <input onchange="validatePhone('phone');" id="phone" type="text" class="right" onclick="this.placeholder='(_ _ _) _ _ _ - _ _ _ _';" autocomplete="off" placeholder="Phone Number" ></input>
+                <input onchange="validatePhone('phone');" name = "phone" id="phone" type="text" class="right" onclick="this.placeholder='(_ _ _) _ _ _ - _ _ _ _';" autocomplete="off" placeholder="Phone Number" ></input>
             </p>
             <p>
                 <label>
@@ -130,7 +127,7 @@
                 <label>
                     Profile Photo
                 </label>
-                <input type="file" class="right" id="profile_image" onchange="validateImage('profile_image');" style="margin-right: 100px; float: left;" name = "dp" autocomplete="off" placeholder="Profile Photo" ></input>
+                <input type="file" class="right" id="dp" onchange="validateImage('profile_image');" style="margin-right: 100px; float: left;" name = "dp" autocomplete="off" placeholder="Profile Photo" ></input>
             </p>
         </div>
     
@@ -142,9 +139,9 @@
           </div>
         </div>
   </div>
-  <input type= "submit" value='click here'>
+ 
     
-    </form>
+ 
     
         
   
@@ -194,31 +191,31 @@
                 <label>
                     Talent Category
                 </label>
-                <input type="text" id="talent_category" onchange="validateText('talent_category');"  autocomplete="off" placeholder="Talent Category*" required></input>
+                <input type="text" name ="category" id="category" onchange="validateText('talent_category');"  autocomplete="off" placeholder="Talent Category*" required></input>
             </p>
             <p>
                 <label>
                     Specific Talent
                 </label>
-                <input type="text" id="specific_talent" onchange="validateText('specific_talent');"  autocomplete="off" placeholder="Specific Talent" required></input>
+                <input type="text" name ="talent" id="talent" onchange="validateText('specific_talent');"  autocomplete="off" placeholder="Specific Talent" required></input>
             </p>
             <p id="portfolio"  style="padding-bottom: 0px;">
                 <label>
                     Portfolio
                 </label>
-                <input type="file" id="portfolio_image" onchange="validateImage('portfolio_image');" autocomplete="off" placeholder="Portfolio" required></input>
+                <input type="file" name = "portfolio" id="portfolio" onchange="validateImage('portfolio_image');" autocomplete="off" placeholder="Portfolio" required></input>
             </p>
             <p id="portfolio" style="padding-bottom: 0px;">
                 <label>
                     Audio
                 </label>
-                <input type="file" id="audio" onchange="validateAudio('audio');" autocomplete="off" placeholder="Audio" required></input>
+                <input type="file" name= "audio" id="audio" onchange="validateAudio('audio');" autocomplete="off" placeholder="Audio" required></input>
             </p>
             <p id="portfolio"  style="padding-bottom: 0px;">
                 <label>
                     Video
                 </label>
-                <input type="file" id="video" onchange="validateVideo('video');" autocomplete="off" placeholder="Video" required></input>
+                <input type="file" name = "video" id="video" onchange="validateVideo('video');" autocomplete="off" placeholder="Video" required></input>
             </p>
         </div>
     
@@ -286,14 +283,14 @@
                 <label>
                     Describe Yourself
                 </label>
-                <textarea id="describe" autocomplete="off" rows="12" placeholder="Describe Yourself (max 1000 characters)*" oninput="countChars();" required></textarea>
+                <textarea name = "desc" id="desc" autocomplete="off" rows="12" placeholder="Describe Yourself (max 1000 characters)*" oninput="countChars();" required></textarea>
             </p>
             <div id="add_links">
                 <p>
                     <label>
                         Personal Web/Social Media
                     </label>
-                    <input type="text" autocomplete="off" placeholder="Personal Web/Social Media" required></input>
+                    <input type="text"  autocomplete="off" placeholder="Personal Web/Social Media" ></input>
                     <button onclick="add_link();">Add Links</button>
                 </p>
             </div>
@@ -301,13 +298,13 @@
                 <label>
                     Experiences (Accomplishments)
                 </label>
-                <input type="text" autocomplete="off" placeholder="Experiences (Accomplishments)" required></input>
+                <input type="text" autocomplete="off" placeholder="Experiences (Accomplishments)" ></input>
             </p>
             <p>
                 <label>
                     Current Representative
                 </label>
-                <input type="text" autocomplete="off" placeholder="Current Representative" required></input>
+                <input type="text" autocomplete="off" placeholder="Current Representative" ></input>
             </p>        
         </div>
     
@@ -373,37 +370,37 @@
                 <label>
                     Opportunities
                 </label>
-                <input type="text" id="opportunities" onchange="validateText('opportunities');"  class="left" autocomplete="off" placeholder="Opportunities*" required></input>
+                <input type="text" name = "opportunities" id="opportunities" onchange="validateText('opportunities');"  class="left" autocomplete="off" placeholder="Opportunities*" required></input>
             </p>
             <p>
                 <label>
                     Representation
                 </label>
-                <input type="text" id="representation" onchange="validateText('representation');"  class="right" autocomplete="off" placeholder="Representation" required></input>
+                <input type="text" name = "representation" id="representation" onchange="validateText('representation');"  class="right" autocomplete="off" placeholder="Representation" required></input>
             </p>
             <p>
                 <label>
                     Talent Development
                 </label>
-                <input type="text" id="talent_development" onchange="validateText('talent_development');"  class="left" autocomplete="off" placeholder="Talent Development" required></input>
+                <input type="text" name = "talentdev" id="talentdev" onchange="validateText('talent_development');"  class="left" autocomplete="off" placeholder="Talent Development" required></input>
             </p>
             <p>
                 <label>
                     General Services
                 </label>
-                <input type="text" id="general_services" onchange="validateText('general_services');" class="right" autocomplete="off" placeholder="General Services" required></input>
+                <input type="text" name = "genserv" id="genserv" onchange="validateText('general_services');" class="right" autocomplete="off" placeholder="General Services" required></input>
             </p>
             <p>
                 <label>
                     Vanity & Luxury Services
                 </label>
-                <input type="text" id="vanity" onchange="validateText('vanity');"  class="left" autocomplete="off" placeholder="Vanity & Luxury Services" required></input>
+                <input type="text" name ="vanityluxury" id="vanityluxury" onchange="validateText('vanity');"  class="left" autocomplete="off" placeholder="Vanity & Luxury Services" required></input>
             </p>
             <p>
                 <label>
                     Additional Requests
                 </label>
-                <input type="text" id="additional" onchange="validateText('additional');"  class="right" autocomplete="off" placeholder="Additional Requests" required></input>
+                <input type="text" name = "additional" id="additional" onchange="validateText('additional');"  class="right" autocomplete="off" placeholder="Additional Requests" required></input>
             </p>
         </div>
     
@@ -416,12 +413,12 @@
    <button class="submit-button" on >
                     Submit
                 </button>
-      
-            </div>
+             </div>
         </div>
     </div>
-        
-    
+       <input type= "submit" value='click here'>
+       
+       </form>
 <!------------------------------------------------------------------------------------------------------------>
     <footer>
       <div class="social-media-bar">

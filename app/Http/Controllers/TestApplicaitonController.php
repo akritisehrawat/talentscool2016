@@ -29,11 +29,30 @@ public function testsql()
 	}
 public function ssdd(ClientRequest $request)
 {
-    echo 'potato';
     $c = new Clients;
     $c->fname = $request->input("fn");
+    $c->lname = $request->input("ln");
+    $c->email = $request->input("email");
+    $c->country = $request->input("country");
+    $c->state = $request->input("state");
+    $c->city = $request->input("city");
+    $c->zip = $request->input("zip");
+    $c->phone = $request->input("phone");
+    $c->dob = $request->input("dob");
+    $c->gender = $request->input("gender");
+    $c->category = $request->input("category");
+    $c->talent = $request->input("talent");
+    $c->portfolio = $request->input("portfolio");
+    $c->audio = $request->input("audio");
+    $c->video = $request->input("video");
+    $c->desc = $request->input("desc");
+    $c->opportunities = $request->input("opportunities");
+    $c->representation = $request->input("representation");
+    $c->talentdev = $request->input("talentdev");
+    $c->genserv = $request->input("genserv");
+    $c->vanityluxury = $request->input("vanityluxury");
+    $c->additional = $request->input("additional");
 
-    echo 'double potato';
     $c->save();
     return back()->withInput();
 
