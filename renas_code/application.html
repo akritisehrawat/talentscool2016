@@ -125,7 +125,7 @@
             </p>
             <p id="profile_photo">
                 <label>
-                    Profile Photo
+                    Headshot
                 </label>
                 <input type="file" class="right" id="profile_image" onchange="validateImage('profile_image');" style="margin-right: 100px; float: left;" name = "dp" autocomplete="off" placeholder="Profile Photo" required></input>
             </p>
@@ -188,7 +188,7 @@
                 <label>
                     Talent Category
                 </label>
-                <input type="text" id="talent_category" onchange="validateText('talent_category');"  autocomplete="off" placeholder="Talent Category*" required></input>
+                <select id="talent_category" required></select>
             </p>
             <p>
                 <label>
@@ -198,7 +198,7 @@
             </p>
             <p id="portfolio"  style="padding-bottom: 0px;">
                 <label>
-                    Portfolio
+                    Image
                 </label>
                 <input type="file" id="portfolio_image" onchange="validateImage('portfolio_image');" autocomplete="off" placeholder="Portfolio" required></input>
             </p>
@@ -212,7 +212,7 @@
                 <label>
                     Video
                 </label>
-                <input type="file" id="video" onchange="validateVideo('video');" autocomplete="off" placeholder="Video" required></input>
+                <input type="text" id="video" autocomplete="off" placeholder="Add Link to Video" required></input>
             </p>
         </div>
     
@@ -367,37 +367,37 @@
                 <label>
                     Opportunities
                 </label>
-                <input type="text" id="opportunities" onchange="validateText('opportunities');"  class="left" autocomplete="off" placeholder="Opportunities*" required></input>
+                <select id="opportunities" class="left" required></select>
             </p>
             <p>
                 <label>
                     Representation
                 </label>
-                <input type="text" id="representation" onchange="validateText('representation');"  class="right" autocomplete="off" placeholder="Representation" required></input>
+                <select id="representation" class="right" required></select>
             </p>
             <p>
                 <label>
                     Talent Development
                 </label>
-                <input type="text" id="talent_development" onchange="validateText('talent_development');"  class="left" autocomplete="off" placeholder="Talent Development" required></input>
+                <select id="talent_development" class="left" required></select>
             </p>
             <p>
                 <label>
                     General Services
                 </label>
-                <input type="text" id="general_services" onchange="validateText('general_services');" class="right" autocomplete="off" placeholder="General Services" required></input>
+                <select id="general_services" class="right" required></select>
             </p>
             <p>
                 <label>
                     Vanity & Luxury Services
                 </label>
-                <input type="text" id="vanity" onchange="validateText('vanity');"  class="left" autocomplete="off" placeholder="Vanity & Luxury Services" required></input>
+                <select id="vanity" class="left" required></select>
             </p>
             <p>
                 <label>
                     Additional Requests
                 </label>
-                <input type="text" id="additional" onchange="validateText('additional');"  class="right" autocomplete="off" placeholder="Additional Requests" required></input>
+                <input type="text" id="additional" onchange="validateText('additional');" class="right" autocomplete="off" placeholder="Additional Requests" required></input>
             </p>
         </div>
     
@@ -440,3 +440,9 @@
 <script src="js/countries.js"></script>
 <script language="javascript">populateCountries("country", "state");</script>
 <script language="javascript">populateGender();</script>
+<script language="javascript">populateTalentCategory();</script>
+<script language="javascript">populateOpportunities();</script>
+<script language="javascript">populateRepresentation();</script>
+<script language="javascript">populateTalentDevelopment();</script>
+<script language="javascript">populateGeneralServices();</script>
+<script language="javascript">populateVanity();</script>
