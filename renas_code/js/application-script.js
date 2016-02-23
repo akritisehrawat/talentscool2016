@@ -77,89 +77,89 @@ $('#app4 .prev-button').click(function() {
 function populateGender() {
     var gender = document.getElementById("gender");
     gender.options[0] = new Option('Select Gender','-1');
-    gender.options[1] = new Option('Male','0');
-    gender.options[2] = new Option('Female','1');
-    gender.options[3] = new Option('Other','2');
-    gender.options[4] = new Option('Prefer Not To Say','3');
+    gender.options[1] = new Option('Male','Male');
+    gender.options[2] = new Option('Female','Female');
+    gender.options[3] = new Option('Other','Other');
+    gender.options[4] = new Option('Prefer Not To Say','Prefer Not To Say');
 }
 
 function populateTalentCategory() {
     var talent = document.getElementById("talent_category");
     talent.options[0] = new Option('Select Talent Category','-1');
-    talent.options[1] = new Option('Dancer','0');
-    talent.options[2] = new Option('Fashion','1');
-    talent.options[3] = new Option('Film','2');
-    talent.options[4] = new Option('Athlete','3');
-    talent.options[5] = new Option('Musician','4');
-    talent.options[6] = new Option('Painter','5');
-    talent.options[7] = new Option('Other (Specify Below)','6');
+    talent.options[1] = new Option('Dancer','Dancer');
+    talent.options[2] = new Option('Fashion','Fashion');
+    talent.options[3] = new Option('Film','Film');
+    talent.options[4] = new Option('Athlete','Athlete');
+    talent.options[5] = new Option('Musician','Musician');
+    talent.options[6] = new Option('Painter','Painter');
+    talent.options[7] = new Option('Other (Specify Below)','Other');
 }
 
 function populateOpportunities() {
     var opp = document.getElementById("opportunities");
     opp.options[0] = new Option('Select Opportunities','-1');
-    opp.options[1] = new Option('Bookings','0');
-    opp.options[2] = new Option('Endorsements','1');
-    opp.options[3] = new Option('Auditions','2');
-    opp.options[4] = new Option('Showcases','3');
-    opp.options[5] = new Option('Appearances','4');
-    opp.options[6] = new Option('Collaborations','5');
-    opp.options[7] = new Option('Jobs','6');
-    opp.options[8] = new Option('Internships','7');
+    opp.options[1] = new Option('Bookings','Bookings');
+    opp.options[2] = new Option('Endorsements','Endorsements');
+    opp.options[3] = new Option('Auditions','Auditions');
+    opp.options[4] = new Option('Showcases','Showcases');
+    opp.options[5] = new Option('Appearances','Appearances');
+    opp.options[6] = new Option('Collaborations','Collarborations');
+    opp.options[7] = new Option('Jobs','Jobs');
+    opp.options[8] = new Option('Internships','Internships');
 }
 
 function populateRepresentation() {
     var rep = document.getElementById("representation");
     rep.options[0] = new Option('Select Representation','-1');
-    rep.options[1] = new Option('Manager','0');
-    rep.options[2] = new Option('Agent','1');
-    rep.options[3] = new Option('Record Deal','2');
-    rep.options[4] = new Option('Booking Agent','3');
-    rep.options[5] = new Option('Publicist','4');
-    rep.options[6] = new Option('Talent Agent','5');
-    rep.options[7] = new Option('Brand Manager','6');
+    rep.options[1] = new Option('Manager','Manager');
+    rep.options[2] = new Option('Agent','Agent');
+    rep.options[3] = new Option('Record Deal','Record Deal');
+    rep.options[4] = new Option('Booking Agent','Booking Agent');
+    rep.options[5] = new Option('Publicist','Publicist');
+    rep.options[6] = new Option('Talent Agent','Talent Agent');
+    rep.options[7] = new Option('Brand Manager','Brand Manager');
 }
 
 function populateTalentDevelopment() {
     var td = document.getElementById("talent_development");
     td.options[0] = new Option('Select Talent Development','-1');
-    td.options[1] = new Option('Vocal Coach','0');
-    td.options[2] = new Option('Acting Coach','1');
-    td.options[3] = new Option('Instrument Teacher','2');
-    td.options[4] = new Option('Dance Instructor','3');
-    td.options[5] = new Option('Art Instructor','4');
-    td.options[6] = new Option('School Placement','5');
+    td.options[1] = new Option('Vocal Coach','Vocal Coach');
+    td.options[2] = new Option('Acting Coach','Acting Coach');
+    td.options[3] = new Option('Instrument Teacher','Instrument Teacher');
+    td.options[4] = new Option('Dance Instructor','Dance Instructor');
+    td.options[5] = new Option('Art Instructor','Art Instructor');
+    td.options[6] = new Option('School Placement','School Placement');
 }
 
 function populateGeneralServices() {
     var gs = document.getElementById("general_services");
     gs.options[0] = new Option('Select General Services','-1');
-    gs.options[1] = new Option('Musician','0');
-    gs.options[2] = new Option('Vocalist','1');
-    gs.options[3] = new Option('Dancer','2');
-    gs.options[4] = new Option('Lawyer','3');
-    gs.options[5] = new Option('Accountant','4');
-    gs.options[6] = new Option('Investor','5');
-    gs.options[7] = new Option('Personal Assistant','6');
-    gs.options[8] = new Option('Web Designer','7');
-    gs.options[9] = new Option('Engineer','8');
-    gs.options[10] = new Option('Fitness Trainer','9');
-    gs.options[11] = new Option('Camera Crew','10');
+    gs.options[1] = new Option('Musician','Musician');
+    gs.options[2] = new Option('Vocalist','Vocalist');
+    gs.options[3] = new Option('Dancer','Dancer');
+    gs.options[4] = new Option('Lawyer','Lawyer');
+    gs.options[5] = new Option('Accountant','Accountant');
+    gs.options[6] = new Option('Investor','Investor');
+    gs.options[7] = new Option('Personal Assistant','Personal Assistant');
+    gs.options[8] = new Option('Web Designer','Web Designer');
+    gs.options[9] = new Option('Engineer','Engineer');
+    gs.options[10] = new Option('Fitness Trainer','Fitness Trainer');
+    gs.options[11] = new Option('Camera Crew','Camera Crew');
 }
 
 function populateVanity() {
     var vanity = document.getElementById("vanity");
     vanity.options[0] = new Option('Select Vanity & Luxury Services','-1');
-    vanity.options[1] = new Option('Clothing Stylist','0');
-    vanity.options[2] = new Option('Hair Stylist','1');
-    vanity.options[3] = new Option('Barber','2');
-    vanity.options[4] = new Option('Makeup Artist','3');
-    vanity.options[5] = new Option('Model','4');
-    vanity.options[6] = new Option('Photographer','5');
-    vanity.options[7] = new Option('Bodyguard','6');
-    vanity.options[8] = new Option('Limo Driver','7');
-    vanity.options[9] = new Option('Private Jet Rental','8');
-    vanity.options[10] = new Option('Studio Rental','9');
+    vanity.options[1] = new Option('Clothing Stylist','Clothing Stylist');
+    vanity.options[2] = new Option('Hair Stylist','Hair Stylist');
+    vanity.options[3] = new Option('Barber','Barber');
+    vanity.options[4] = new Option('Makeup Artist','Makeup Artist');
+    vanity.options[5] = new Option('Model','Model');
+    vanity.options[6] = new Option('Photographer','Photographer');
+    vanity.options[7] = new Option('Bodyguard','Bodyguard');
+    vanity.options[8] = new Option('Limo Driver','Limo Driver');
+    vanity.options[9] = new Option('Private Jet Rental','Private Jet Rental');
+    vanity.options[10] = new Option('Studio Rental','Studio Rental');
 }
 
 var added_links = 0;
@@ -170,7 +170,8 @@ function add_link() {
         alert("Cannot add more than 3 new links");
     }
     else {
-        document.getElementById("add_links").innerHTML+= '<p><input type="text" focused autocomplete="off" placeholder="New Link" required></input></p>';
+        var name = 'extralink' + added_links;
+        document.getElementById("add_links").innerHTML+= '<p><input type="text" name=' + name + ' focused autocomplete="off" placeholder="New Link" required></input></p>';
     }
 }
 
