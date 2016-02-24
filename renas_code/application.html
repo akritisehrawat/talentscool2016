@@ -188,36 +188,38 @@
         </div>
     
         <div class="info"> 
-            <p id="portfolio" style="padding-bottom: 0px;">
-                <label>
-                    Talent 
-                </label>
-                <select id="talent_category" required onchange="furtherPopulateTalent();"></select>
-            </p>
-            <p id="portfolio" style="padding-bottom: 0px;">
-                <label>
-                    Talent
-                </label>
-                <select id="specific_talent" required disabled></select>
-            </p>
-            <p id="portfolio"  style="padding-bottom: 0px;">
-                <label>
-                    Image
-                </label>
-                <input type="file" id="portfolio_image" onchange="validateImage('portfolio_image');" autocomplete="off" placeholder="Portfolio" required></input>
-            </p>
-            <p id="portfolio" style="padding-bottom: 0px;">
-                <label id="audio_label">
-                    Audio
-                </label>
-                <input type="file" id="audio" onchange="validateAudio('audio');" autocomplete="off" placeholder="Audio" required></input>
-            </p>
-            <p id="portfolio"  style="padding-bottom: 0px;">
-                <label id="video_label">
-                    Video
-                </label>
-                <input type="text" id="video" autocomplete="off" placeholder="Add Link to Video" required></input>
-            </p>
+            <div class="app2_wrapper">
+                <p id="portfolio" style="padding-bottom: 0px;">
+                    <label>
+                        Talent 
+                    </label>
+                    <select id="talent_category" required onchange="furtherPopulateTalent();"></select>
+                </p>
+                <p id="portfolio" style="padding-bottom: 0px;">
+                    <label>
+                        Talent
+                    </label>
+                    <select id="specific_talent" required disabled></select>
+                </p>
+                <p id="portfolio"  style="padding-bottom: 0px;">
+                    <label>
+                        Image
+                    </label>
+                    <input type="file" id="portfolio_image" onchange="validateImage('portfolio_image');" autocomplete="off" placeholder="Portfolio" required></input>
+                </p>
+                <p id="portfolio" style="padding-bottom: 0px;">
+                    <label id="audio_label">
+                        Audio
+                    </label>
+                    <input type="file" id="audio" onchange="validateAudio('audio');" autocomplete="off" placeholder="Audio" required></input>
+                </p>
+                <p id="portfolio"  style="padding-bottom: 0px;">
+                    <label id="video_label">
+                        Video
+                    </label>
+                    <input type="text" id="video" autocomplete="off" placeholder="Add Link to Video" required></input>
+                </p>
+            </div>
         </div>
     
         <div class="buttons_container">
@@ -279,36 +281,36 @@
         </div>
     
         <div class="info"> 
-           <!-- <p style="margin-bottom: 10em;"> -->
-           <!-- <p class="describe-section"> -->
-            <p>
+           <div class="app3_wrapper">
+                <p>
 
-                <label>
-                    Describe Yourself
-                </label>
-                <textarea id="describe" autocomplete="off" rows="12" placeholder="Describe Yourself (max 1000 characters)*" oninput="countChars();" required></textarea>
-            </p>
-            <div id="add_links">
+                    <label>
+                        Describe Yourself
+                    </label>
+                    <textarea id="describe" autocomplete="off" rows="12" placeholder="Describe Yourself (max 1000 characters)*" oninput="countChars();" required></textarea>
+                </p>
+                <div id="add_links">
+                    <p>
+                        <label>
+                            Personal Web/Social Media
+                        </label>
+                        <input type="text" autocomplete="off" placeholder="Personal Web/Social Media" required></input>
+                        <button class="addlink-button" onclick="add_link();">Add Links</button>
+                    </p>
+                </div>
                 <p>
                     <label>
-                        Personal Web/Social Media
+                        Experiences (Accomplishments)
                     </label>
-                    <input type="text" autocomplete="off" placeholder="Personal Web/Social Media" required></input>
-                    <button class="addlink-button" onclick="add_link();">Add Links</button>
+                    <input type="text" autocomplete="off" placeholder="Experiences (Accomplishments)" required></input>
                 </p>
+                <p>
+                    <label>
+                        Current Representative
+                    </label>
+                    <input type="text" autocomplete="off" placeholder="Current Representative" required></input>
+                </p>        
             </div>
-            <p>
-                <label>
-                    Experiences (Accomplishments)
-                </label>
-                <input type="text" autocomplete="off" placeholder="Experiences (Accomplishments)" required></input>
-            </p>
-            <p>
-                <label>
-                    Current Representative
-                </label>
-                <input type="text" autocomplete="off" placeholder="Current Representative" required></input>
-            </p>        
         </div>
     
         <div class="buttons_container">

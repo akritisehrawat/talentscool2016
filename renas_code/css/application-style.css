@@ -233,6 +233,22 @@ input:required:before {
     float: left;
 }
 
+.app2_wrapper {
+    width: 40%;
+    margin: 0 auto;
+}
+
+
+.app3_wrapper {
+    width: 65%;
+    margin: 0 auto;
+    margin-right: 13%;
+}
+
+.app3_wrapper p input {
+    width: 400px;   
+}
+
 input[type="text"]:focus, input[type="text"].focus {
     border: solid 5px #969696;
 }
@@ -255,11 +271,12 @@ textarea {
     margin-left: 0px;
     float: left;
     margin-bottom: 1.5em;
-    width: 57.5%;
+    width: 400px;
 }
 
 #add_links input {
     margin-right: 5%;
+    width: 400px;
 }
 
 
