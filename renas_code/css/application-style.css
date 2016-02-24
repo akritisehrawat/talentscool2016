@@ -125,6 +125,42 @@ body {
     margin-left: 19%;
 }
 
+input::-webkit-input-placeholder {
+    color: black !important;
+}
+ 
+input:-moz-placeholder { /* Firefox 18- */
+    color: black !important;  
+    opacity: 1;
+}
+ 
+input::-moz-placeholder {  /* Firefox 19+ */
+    color: black !important;  
+    opacity: 1;
+}
+ 
+input:-ms-input-placeholder {  
+    color: black !important;  
+}
+
+textarea::-webkit-input-placeholder {
+    color: black !important;
+}
+ 
+textarea:-moz-placeholder { /* Firefox 18- */
+    color: black !important;  
+    opacity: 1;
+}
+ 
+textarea::-moz-placeholder {  /* Firefox 19+ */
+    color: black !important;  
+    opacity: 1;
+}
+ 
+textarea:-ms-input-placeholder {  
+    color: black !important;  
+}
+
 .navigation .personal_li, .navigation .talent_li, .navigation .services_li, 
 .navigation .additional_li/* , .navigation .review_li, .navigation .complete_li */ {
     color: red;
