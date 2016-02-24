@@ -91,9 +91,83 @@ function populateTalentCategory() {
     talent.options[3] = new Option('Film','Film');
     talent.options[4] = new Option('Athlete','Athlete');
     talent.options[5] = new Option('Musician','Musician');
-    talent.options[6] = new Option('Painter','Painter');
-    talent.options[7] = new Option('Other (Specify Below)','Other');
+    talent.options[6] = new Option('Artist','Artist');
+//     talent.options[7] = new Option('Other (Specify Below)','Other');
 }
+
+function clearOptions() {
+    var select = document.getElementById("specific_talent");
+    var length = select.options.length;
+    for (i = 0; i < length; i++) {
+      select.options[i] = null;
+    }
+}
+
+function furtherPopulateTalent() {
+    var further = document.getElementById("specific_talent");
+    var talent = document.getElementById("talent_category");
+    clearOptions();
+    if(talent.options[talent.selectedIndex].text == "Dancer") {
+        further.options[0] = new Option('Select Specific Talent','-1');
+        further.options[1] = new Option('Hip Hop','Hip Hop');
+        further.options[2] = new Option('Jazz','Jazz');
+        further.options[3] = new Option('Ballet','Ballet');
+        further.options[4] = new Option('Western','Western');
+        further.options[5] = new Option('Zumba','Zumba');
+    }
+    
+    if(talent.options[talent.selectedIndex].text == "Fashion") {
+        further.options[0] = new Option('Select Specific Talent','-1');
+        further.options[1] = new Option('Model','Model');
+        further.options[2] = new Option('Clothing Stylist','Clothing Stylist');
+        further.options[3] = new Option('Hair Stylist','Hair Stylist');
+        further.options[4] = new Option('Designing','Designing');
+    }
+    
+    if(talent.options[talent.selectedIndex].text == "Film") {
+        further.options[0] = new Option('Select Specific Talent','-1');
+        further.options[1] = new Option('Actor','Actor');
+        further.options[2] = new Option('Comedian','Comedian');
+        further.options[3] = new Option('Make-Up Artist','Make-Up Artist');
+    }
+    
+    if(talent.options[talent.selectedIndex].text == "Athlete") {
+        further.options[0] = new Option('Select Specific Talent','-1');
+        further.options[1] = new Option('Gymnast','Gymnast');
+        further.options[2] = new Option('Football','Football');
+        further.options[3] = new Option('Wrestling','Wrestling');
+        further.options[4] = new Option('Kayaking','Kayaking');
+        further.options[5] = new Option('Martial Arts','Martial Arts');
+    }
+    
+    if(talent.options[talent.selectedIndex].text == "Musician") {
+        further.options[0] = new Option('Select Specific Talent','-1');
+        further.options[1] = new Option('Songwriter','Songwriter');
+        further.options[2] = new Option('Vocalist','Vocalist');
+        further.options[3] = new Option('Pianist','Pianist');
+        further.options[4] = new Option('Guitarist','Guitarist');
+    }
+    
+    if(talent.options[talent.selectedIndex].text == "Artist") {
+        further.options[0] = new Option('Select Specific Talent','-1');
+        further.options[1] = new Option('Painting','Painting');
+        further.options[2] = new Option('Photography','Photography');
+        further.options[3] = new Option('Architecture','Architecture');
+        further.options[4] = new Option('Sculpture','Sculpture');
+        further.options[5] = new Option('Crafting','Crafting');
+    }
+    
+}
+
+/*
+Dance: Hip Hop, Jazz, Ballet, Western, Zumba etc.
+Musician: Songwriter, Vocalist, Pianist, Guitarist etc.
+Fashion: Model, clothing or hair stylist, designing etc.
+Film: actor or actress, comedian, make-up artists etc.
+Athlete: Gymnast, football, wrestling, kayaking, martial arts etc.
+Art: Painting, Photography, architecture, sculpture, crafting etc.
+
+*/
 
 function populateOpportunities() {
     var opp = document.getElementById("opportunities");
