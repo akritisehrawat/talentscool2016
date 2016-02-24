@@ -179,6 +179,7 @@ function populateOpportunities() {
     opp.options[6] = new Option('Collaborations','Collarborations');
     opp.options[7] = new Option('Jobs','Jobs');
     opp.options[8] = new Option('Internships','Internships');
+    opp.options[0].selected = true;
 }
 
 function populateRepresentation() {
@@ -191,6 +192,7 @@ function populateRepresentation() {
     rep.options[5] = new Option('Publicist','Publicist');
     rep.options[6] = new Option('Talent Agent','Talent Agent');
     rep.options[7] = new Option('Brand Manager','Brand Manager');
+    rep.options[0].selected = true;
 }
 
 function populateTalentDevelopment() {
@@ -202,6 +204,7 @@ function populateTalentDevelopment() {
     td.options[4] = new Option('Dance Instructor','Dance Instructor');
     td.options[5] = new Option('Art Instructor','Art Instructor');
     td.options[6] = new Option('School Placement','School Placement');
+    td.options[0].selected = true;
 }
 
 function populateGeneralServices() {
@@ -218,6 +221,7 @@ function populateGeneralServices() {
     gs.options[9] = new Option('Engineer','Engineer');
     gs.options[10] = new Option('Fitness Trainer','Fitness Trainer');
     gs.options[11] = new Option('Camera Crew','Camera Crew');
+    gs.options[0].selected = true;
 }
 
 function populateVanity() {
@@ -233,6 +237,7 @@ function populateVanity() {
     vanity.options[8] = new Option('Limo Driver','Limo Driver');
     vanity.options[9] = new Option('Private Jet Rental','Private Jet Rental');
     vanity.options[10] = new Option('Studio Rental','Studio Rental');
+    vanity.options[0].selected = true;
 }
 
 var added_links = 0;
