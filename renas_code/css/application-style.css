@@ -305,7 +305,8 @@ select {
 
 button {
     color: #fff;
-    background-color: #6496c8;
+/*     background-color: #6496c8; */
+    background-color: #c96464;
     text-shadow: -1px 1px #417cb8;
     border: none;
     line-height: 3em;
@@ -316,20 +317,29 @@ button {
 }
 
 button:hover, button.hover {
+/* 
     background-color: #346392;
     text-shadow: -1px 1px #27496d;
+ */
+    background-color: #6d2727;
     cursor: pointer;
 }
 
 button:active, button.active {
+/* 
     background-color: #27496d;
     text-shadow: -1px 1px #193047;
+ */
+    background-color: #6d2727;
     cursor: pointer;
 }
 
 button:onclick, button.active {
+/* 
     background-color: #27496d;
     text-shadow: -1px 1px #193047;
+ */
+    background-color: #6d2727;
     cursor: progress;
 }
 
