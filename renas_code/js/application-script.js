@@ -79,8 +79,7 @@ function populateGender() {
     gender.options[0] = new Option('Select Gender','-1');
     gender.options[1] = new Option('Male','Male');
     gender.options[2] = new Option('Female','Female');
-    gender.options[3] = new Option('Other','Other');
-    gender.options[4] = new Option('Prefer Not To Say','Prefer Not To Say');
+    gender.options[3] = new Option('Prefer Not To Say','Prefer Not To Say');
 }
 
 function populateTalentCategory() {
@@ -240,8 +239,8 @@ var added_links = 0;
 function add_link() {
     //alert("in add links");
     added_links = added_links + 1;
-    if(added_links >= 4) {
-        alert("Cannot add more than 3 new links");
+    if(added_links >= 15) {
+        alert("Cannot add more than 15 social media links");
     }
     else {
         var name = 'extralink' + added_links;
