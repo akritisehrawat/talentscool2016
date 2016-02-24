@@ -200,6 +200,7 @@ input[type="text"], input[type="file"], select, textarea {
     border: solid 3px #c9c9c9;
     transition: border 0.3s;
     font-family: Tenso;
+    width: 212px;
 }
 
 #talent_category {
