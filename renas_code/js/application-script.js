@@ -84,7 +84,7 @@ function populateGender() {
 
 function populateTalentCategory() {
     var talent = document.getElementById("talent_category");
-    talent.options[0] = new Option('Select Talent Category','-1');
+    talent.options[0] = new Option('Select Industry','-1');
     talent.options[1] = new Option('Dancer','Dancer');
     talent.options[2] = new Option('Fashion','Fashion');
     talent.options[3] = new Option('Film','Film');
