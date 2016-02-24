@@ -161,9 +161,13 @@ textarea:-ms-input-placeholder {
     color: black !important;  
 }
 
-input:invalid {
-    border: 2px solid red;
+input:visited:empty {
+    border: 2px solid red !important;
 } 
+
+input:required:before {
+    border: 2px solid red !important;
+}
 
 .navigation .personal_li, .navigation .talent_li, .navigation .services_li, 
 .navigation .additional_li/* , .navigation .review_li, .navigation .complete_li */ {
@@ -267,7 +271,7 @@ textarea {
 
 input[type="file"] {
 /*     color: transparent;  */
-    width: 200px; 
+    width: 212px; 
     font-size: 15px;
 }
 
@@ -297,10 +301,11 @@ select {
 #portfolio label, #portfolio input {
     float: left;
     margin-bottom: 1em;
+    margin-right: 30px;
 }
 
-#audio, #video, #portfolio_image {
-    margin-left: 25px;
+#audio_label, #video_label {
+    margin-right: 35px !important;
 }
 
 #state {
