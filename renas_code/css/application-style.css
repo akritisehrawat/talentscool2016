@@ -161,6 +161,10 @@ textarea:-ms-input-placeholder {
     color: black !important;  
 }
 
+input:invalid {
+    border: 2px solid red;
+} 
+
 .navigation .personal_li, .navigation .talent_li, .navigation .services_li, 
 .navigation .additional_li/* , .navigation .review_li, .navigation .complete_li */ {
     color: red;
