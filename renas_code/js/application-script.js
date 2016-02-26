@@ -463,8 +463,25 @@ $("input#specific_talent.left")
 
 $('.multi-field-wrapper').each(function() {
     var $wrapper = $('.multi-fields', this);
+    var $i = 1;
+    var $oldval = "";
     $(".add-field", $(this)).click(function(e) {
-        $('.multi-field:first-child', $wrapper).clone(true).appendTo($wrapper).find('input').val('').focus();
+        if (($('.multi-field', $wrapper).length < 3))
+        {        
+            $i= $i+1;         
+            var $mediachild = $('.multi-field:first-child', $wrapper);
+         //   alert('img='+$mediachild.find('.imgdiv').val()+' vid='+$mediachild.find('.vidtype').val()+' aud='+$mediachild.find('.audtype').val());
+            $mediachild.clone(true).appendTo($wrapper);
+            $mediachild.find('.imgtype').val('img'+$i);
+            $mediachild.find('.imgdiv').attr('id','img'+$i);
+            $mediachild.find('.audtype').val('audio'+$i);
+            $mediachild.find('.auddiv').attr('id','audio'+$i);
+            $mediachild.find('.vidtype').val('video'+$i);
+            $mediachild.find('.viddiv').attr('id','video'+$i);
+            
+            
+        } 
+        
     });
     $('.multi-field .remove-field', $wrapper).click(function() {
         if ($('.multi-field', $wrapper).length > 1)

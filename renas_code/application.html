@@ -248,18 +248,18 @@
                         <div id = "mediapertalent">
                 <!--- image, audio, video-->
                             <div id ="radioselector">
-                                <input type="radio" name="myRadio" value="img" />Image
-                                <input type="radio" name="myRadio" value="audio" />Audio
-                                <input type="radio" name="myRadio" value="video" />Video <br><br>
+                                <input type="radio" class ="imgtype" name="myRadio" value="img1" />Image
+                                <input type="radio" class ="audtype" name="myRadio" value="audio1" />Audio
+                                <input type="radio" class ="vidtype" name="myRadio" value="video1" />Video <br><br>
                             </div>
                             <div id="media">
-                                <div id="img">
+                                <div class="imgdiv" id="img1">
                                     <input type="file" id="portfolio_image" onchange="validateImage('portfolio_image');" autocomplete="off" placeholder="Portfolio" required></input>
                                 </div>
-                                <div id="audio">
+                                <div class ="auddiv" id="audio1">
                                     <input type="text" id="audio" autocomplete="off" placeholder="Add Link to Audio" required></input> 
                                 </div>
-                                <div id="video">
+                                <div class = "viddiv" id="video1">
                                     <input type="text" id="video" autocomplete="off" placeholder="Add Link to Video" required></input>
                                 </div>
                             </div>
