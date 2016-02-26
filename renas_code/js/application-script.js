@@ -395,8 +395,22 @@ function validateAudio(audio_id) {
     }
     
 }
-
-
+//MB - basically does the profile pic preview thing
+function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            
+            reader.onload = function (e) {
+                $('#blah').attr('src', e.target.result);
+            }
+            
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    
+    $("#profile_image").change(function(){
+        readURL(this);
+    });
 
 jQuery(function($) {
 //     var $j = jQuery.noConflict();
