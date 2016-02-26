@@ -93,12 +93,12 @@ function populateGender() {
 function populateTalentCategory() {
     var talent = document.getElementById("talent_category");
     talent.options[0] = new Option('Select Industry','-1');
-    talent.options[1] = new Option('Dancer','Dancer');
+    talent.options[1] = new Option('Dance','Dance');
     talent.options[2] = new Option('Fashion','Fashion');
     talent.options[3] = new Option('Film','Film');
-    talent.options[4] = new Option('Athlete','Athlete');
-    talent.options[5] = new Option('Musician','Musician');
-    talent.options[6] = new Option('Artist','Artist');
+    talent.options[4] = new Option('Athletics','Athletics');
+    talent.options[5] = new Option('Music','Music');
+    talent.options[6] = new Option('Art','Art');
 //     talent.options[7] = new Option('Other (Specify Below)','Other');
 }
 
@@ -421,7 +421,31 @@ jQuery(function($) {
       yearRange: '1916:2016'
     });
 });
+//MB - function for dynamically changing the talent fields
+$(document).ready(function(){
+    //hide all in target div
+    $("div", "div#talents").hide();
+    $("select#talent_category").change(function(){
+        // hide previously shown in target div
+        $("div", "div#talents").hide();
+        
+        // read id from your select
+        var value = $(this).val();
+        
+        // show rlrment with selected id
+        $("div#"+value).show();
 
+        
+    });
+});
+
+$("input#specific_talent.left")
+.mouseover(function() {
+  $("div#toolTip").show();
+})
+.mouseout(function() {
+  $("div#toolTip").hide();
+});
 
 
 

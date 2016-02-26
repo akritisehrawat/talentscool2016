@@ -192,16 +192,56 @@
             <div class="app2_wrapper">
                 <p id="portfolio" style="padding-bottom: 0px;">
                     <label>
-                        Talent 
+                        Industry 
                     </label>
-                    <select id="talent_category" required onchange="furtherPopulateTalent();"></select>
+                    <select id="talent_category" name="talent_category" required onchange="furtherPopulateTalent();"></select>
                 </p>
-                <p id="portfolio" style="padding-bottom: 0px;">
-                    <label>
-                        Talent
-                    </label>
-                    <select id="specific_talent" required></select>
-                </p>
+              <!-- basically talents will contain every talent available right now but it will display only those that the user selects-->
+              <div id = "talents">
+                 <div id = "Dance">
+                    <p id="portfolio" style="padding-bottom: 0px;">
+                        <label>Talent</label>
+                        <input id="specific_talent" type="text" class="left" autocomplete="off" placeholder="Hover me!" required></input>
+                    </p>
+                    <div id = "toolTip">Hip Hop, Jazz, Ballet, Western, Zumba </div>
+                    </div>
+                 <div id = "Fashion">
+                    <p id="portfolio" style="padding-bottom: 0px;">
+                        <label>Talent</label>
+                        <input id="specific_talent" type="text" class="left" autocomplete="off" placeholder="Hover Me!" required></input>
+                    </p>
+                    <div id = "toolTip">Model, Clothing Stylist, Hair Stylist, Designing</div>
+                 </div>
+                 <div id = "Film">
+                    <p id="portfolio" style="padding-bottom: 0px;">
+                        <label>Talent</label>
+                        <input id="specific_talent" type="text" class="left" autocomplete="off" placeholder="Hover Me!" required></input>
+                    </p>
+                    <div id = "toolTip">Actor, Comedian, Make-Up Artist</div>
+                 </div>
+                 <div id = "Athletics">
+                    <p id="portfolio" style="padding-bottom: 0px;">
+                        <label>Talent</label>
+                        <input id="specific_talent" type="text" class="left" autocomplete="off" placeholder="Hover Me!" required></input>
+                    </p>
+                    <div id = "toolTip">Gymnast, Football, Wrestling, Kayaking, Martial Arts</div>
+                 </div>
+                 <div id = "Music">
+                    <p id="portfolio" style="padding-bottom: 0px;">
+                        <label>Talent</label>
+                        <input id="specific_talent" type="text" class="left" autocomplete="off" placeholder="Hover Me!" required></input>
+                    </p>
+                    <div id = "toolTip">Songwriter, Vocalist, Pianist, Guitarist</div>
+                 </div>
+                 <div id = "Art">
+                    <p id="portfolio" style="padding-bottom: 0px;">
+                        <label>Talent</label>
+                        <input id="specific_talent" type="text" class="left" autocomplete="off" placeholder="Hover Me!" required></input>
+                    </p>
+                    <div id = "toolTip">Painting, Photography, Architecture, Sculpting, Crafting</div>
+                 </div>
+               </div>
+            <!--
                 <p id="portfolio"  style="padding-bottom: 0px;">
                     <label>
                         Image
@@ -220,6 +260,7 @@
                     </label>
                     <input type="text" id="video" autocomplete="off" placeholder="Add Link to Video" required></input>
                 </p>
+            -->
             </div>
         </div>
     
@@ -435,8 +476,6 @@
             </div>
         </div>
     </div>
-        <input type= "submit" value='click here'>
-    
     </form>
 		
     
