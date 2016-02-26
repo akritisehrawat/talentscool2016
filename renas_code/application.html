@@ -204,7 +204,9 @@
                         <input id="specific_talent" type="text" class="left" autocomplete="off" placeholder="Hover me!" required></input>
                     </p>
                     <div id = "toolTip">Hip Hop, Jazz, Ballet, Western, Zumba </div>
-                    </div>
+                   
+                </p>
+                 </div>
                  <div id = "Fashion">
                     <p id="portfolio" style="padding-bottom: 0px;">
                         <label>Talent</label>
@@ -240,6 +242,25 @@
                     </p>
                     <div id = "toolTip">Painting, Photography, Architecture, Sculpting, Crafting</div>
                  </div>
+              </div>
+              <div id = "mediapertalent">
+                <!--- image, audio, video-->
+                  <div id ="radioselector">
+                    <input type="radio" name="myRadio" value="img" />Image
+                    <input type="radio" name="myRadio" value="audio" />Audio
+                    <input type="radio" name="myRadio" value="video" />Video <br><br>
+                  </div>
+                  <div id="media">
+                    <div id="img">
+                       <input type="file" id="portfolio_image" onchange="validateImage('portfolio_image');" autocomplete="off" placeholder="Portfolio" required></input>
+                     </div>
+                    <div id="audio">
+                        <input type="text" id="audio" autocomplete="off" placeholder="Add Link to Audio" required></input> 
+                    </div>
+                    <div id="video">
+                        <input type="text" id="video" autocomplete="off" placeholder="Add Link to Video" required></input>
+                    </div>
+                  </div>
                </div>
             <!--
                 <p id="portfolio"  style="padding-bottom: 0px;">

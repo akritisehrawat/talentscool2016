@@ -266,6 +266,15 @@ input[type="text"], input[type="file"], select, textarea {
     float: left;
 }
 
+input[type="radio"]{
+    margin-left: 12%;
+    margin-top: 5%;
+}
+
+#media{
+    display: -moz-inline-box;
+    margin-left: 2%;
+}
 textarea {
     margin-left: 0px;
     float: left;
