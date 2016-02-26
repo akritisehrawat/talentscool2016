@@ -272,12 +272,12 @@ input[type="text"], input[type="file"], select, textarea {
 }
 #toolTip{
     font-size: 18px;
-float: right;
-margin-top: -100px;
-margin-right: -5px;
-background-color: grey;
-color: white;
-padding: 4px;
+    float: right;
+    margin-top: -100px;
+    margin-right: -5px;
+    background-color: grey;
+    color: white;
+    padding: 4px;
 }
 #media{
     margin-top: -10%;
@@ -285,9 +285,12 @@ padding: 4px;
 }
 .remove-field{
     font-size: 10px;
+    float: right;
+    margin-top: -10%;
 }
 .add-field{
     font-size: 10px;
+    float:left;
 }
 textarea {
     margin-left: 0px;
