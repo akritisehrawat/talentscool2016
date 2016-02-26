@@ -424,23 +424,29 @@ jQuery(function($) {
 //MB - function for dynamically changing the talent fields
     //hide all in target div
 $("div", "div#talents").hide();
+$("div", "div.multi-field-wrapper").hide();
 $("select#talent_category").change(function(){
         // hide previously shown in target div
     $("div", "div#talents").hide();
         // read id from your select
     var value = $(this).val();
         // show rlrment with selected id
-        $("div#mediapertalent").show();
+    $("div.multi-field-wrapper").show();
+    $("div.multi-fields").show();
+    $("div.multi-field").show();
+    $("div#mediapertalent").show();
+    $("div#radioselector").show();
+    $("div#media").show();
+    
     $("div#"+value).show();
     //also show the media
 
 });
 
-$("div", "div#media").hide();
 $("div#radioselector").on("change", function() {
    //alert($('input[name="myRadio"]:checked', '#myForm').val()); 
         // hide previously shown in target div
-    $("div", "div#media").hide();
+    $("div","div#media").hide();
         // read id from your select
     var value = $("input[name='myRadio']:checked", "div#radioselector").val();
        // show rlrment with selected id
