@@ -362,6 +362,42 @@
                     </label>
                     <textarea id="describe" autocomplete="off" rows="12" placeholder="Describe Yourself (max 1000 characters)*" oninput="countChars();" required></textarea>
                 </p>
+                <div id="instagram">
+                    <p>
+                        <label>
+                            Instagram Link
+                        </label>
+                        <input type="text" autocomplete="off" placeholder="Instagram Link" required></input>
+                        
+                    </p>
+                </div>
+                <div id="facebook">
+                    <p>
+                        <label>
+                            Facebook Link
+                        </label>
+                        <input type="text" autocomplete="off" placeholder="Facebook Link" required></input>
+                        
+                    </p>
+                </div>
+                <div id="twitter">
+                    <p>
+                        <label>
+                            Twitter Link
+                        </label>
+                        <input type="text" autocomplete="off" placeholder="Twitter Link" required></input>
+                        
+                    </p>
+                </div>
+                <div id="youtube">
+                    <p>
+                        <label>
+                            YouTube Link
+                        </label>
+                        <input type="text" autocomplete="off" placeholder="YouTube Link" required></input>
+                        
+                    </p>
+                </div>
                 <div id="add_links">
                     <p>
                         <label>
@@ -375,13 +411,13 @@
                     <label>
                         Experiences 
                     </label>
-                    <input type="text" autocomplete="off" placeholder="Experiences" required></input>
+                    <textarea id="exp" autocomplete="off" rows="4" placeholder="Experiences" oninput="countChars();" required></textarea>
                 </p>
                 <p>
                     <label>
                         Awards 
                     </label>
-                    <input type="text" autocomplete="off" placeholder="Awards" required></input>
+                    <textarea id="awards" autocomplete="off" rows="4" placeholder="Awards" oninput="countChars();" required></textarea>
                 </p>
                 <p>
                     <label>
@@ -445,9 +481,6 @@
  -->
             </ul>
  
-            <div>
-                <br><br><br>Press CTRL (Windows) or Command (Mac) to select multiple options
-            </div>
 
         </div>
     
@@ -456,7 +489,8 @@
                 <label>
                     Opportunities
                 </label>
-                <select multiple id="opportunities" class="left" required></select>
+                <select multiple id="opportunities" name="opportunities" multiple = "multiple" class="left" required></select>
+
             </p>
             <p>
                 <label>
