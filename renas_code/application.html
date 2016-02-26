@@ -243,25 +243,34 @@
                     <div id = "toolTip">Painting, Photography, Architecture, Sculpting, Crafting</div>
                  </div>
               </div>
-              <div id = "mediapertalent">
+              <div class="multi-field-wrapper">
+                 <div class="multi-fields">
+                    <div class="multi-field">
+                        <div id = "mediapertalent">
                 <!--- image, audio, video-->
-                  <div id ="radioselector">
-                    <input type="radio" name="myRadio" value="img" />Image
-                    <input type="radio" name="myRadio" value="audio" />Audio
-                    <input type="radio" name="myRadio" value="video" />Video <br><br>
-                  </div>
-                  <div id="media">
-                    <div id="img">
-                       <input type="file" id="portfolio_image" onchange="validateImage('portfolio_image');" autocomplete="off" placeholder="Portfolio" required></input>
-                     </div>
-                    <div id="audio">
-                        <input type="text" id="audio" autocomplete="off" placeholder="Add Link to Audio" required></input> 
+                            <div id ="radioselector">
+                                <input type="radio" name="myRadio" value="img" />Image
+                                <input type="radio" name="myRadio" value="audio" />Audio
+                                <input type="radio" name="myRadio" value="video" />Video <br><br>
+                            </div>
+                            <div id="media">
+                                <div id="img">
+                                    <input type="file" id="portfolio_image" onchange="validateImage('portfolio_image');" autocomplete="off" placeholder="Portfolio" required></input>
+                                </div>
+                                <div id="audio">
+                                    <input type="text" id="audio" autocomplete="off" placeholder="Add Link to Audio" required></input> 
+                                </div>
+                                <div id="video">
+                                    <input type="text" id="video" autocomplete="off" placeholder="Add Link to Video" required></input>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="remove-field">Remove</button>
                     </div>
-                    <div id="video">
-                        <input type="text" id="video" autocomplete="off" placeholder="Add Link to Video" required></input>
-                    </div>
-                  </div>
-               </div>
+                </div>
+                <button type="button" class="add-field">Add field</button>
+            </div>
+              
             <!--
                 <p id="portfolio"  style="padding-bottom: 0px;">
                     <label>

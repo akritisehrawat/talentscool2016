@@ -266,14 +266,28 @@ input[type="text"], input[type="file"], select, textarea {
     float: left;
 }
 
-input[type="radio"]{
-    margin-left: 12%;
+#radioselector{
+    margin-left: -60%;
     margin-top: 5%;
 }
-
+#toolTip{
+    font-size: 18px;
+float: right;
+margin-top: -100px;
+margin-right: -5px;
+background-color: grey;
+color: white;
+padding: 4px;
+}
 #media{
-    display: -moz-inline-box;
-    margin-left: 2%;
+    margin-top: -10%;
+    float: right;
+}
+.remove-field{
+    font-size: 10px;
+}
+.add-field{
+    font-size: 10px;
 }
 textarea {
     margin-left: 0px;
