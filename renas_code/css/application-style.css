@@ -275,7 +275,7 @@ input[type="text"], input[type="file"], select, textarea {
 }
 
 #radioselector{
-    margin-left: -60%;
+    margin-left: -54%;
     margin-top: 5%;
 }
 #toolTip{
@@ -287,18 +287,20 @@ input[type="text"], input[type="file"], select, textarea {
     color: white;
     padding: 4px;
 }
-#media{
-    margin-top: -10%;
+.imgdiv, .auddiv, .viddiv{
+    margin-top: -5%;
     float: right;
 }
 .remove-field{
     font-size: 10px;
     float: right;
-    margin-top: -10%;
+    margin-top: -6%;
+    margin-left: 100%;
 }
 .add-field{
     font-size: 10px;
     float:left;
+    margin-left:3%;
 }
 textarea {
     margin-left: 0px;
