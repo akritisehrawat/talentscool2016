@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use DB;
-
+use Log;
 use App\Http\Requests\ClientRequest;
 use App\Clients;
 class TestApplicaitonController extends Controller {
@@ -40,6 +40,7 @@ public function ssdd(ClientRequest $request)
     $c->phone = $request->input("phone");
     $c->dob = $request->input("dob");
     $c->gender = $request->input("gender");
+    Log::info('This is some useful information.');
     $c->category = $request->input("category");
     $c->talent = $request->input("talent");
     $c->portfolio = $request->input("portfolio");

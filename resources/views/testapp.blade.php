@@ -7,27 +7,30 @@
         TalentsCool | Application
     </title>
     
-    <link rel="stylesheet" href="css/application-style.css" />
+    <link rel="stylesheet" href="css/application-style-temp2.css" />
     <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="/resources/demos/style.css">
 </head>
 
 <body>
-  
+    
     <div class="header">
-
+        <div>
+            <h1><a href="index.html"><img src="images/TSVector.png"></a></h1>
+        </div>
     </div>
-				
-    <form id = "myform" action = {!! URL::to('formSubmit') !!} method = "post">
-    <!--- and i'm high on believeing that you're in love with me token-->
-<input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
 
+    <form id = "myform" action = {!! URL::to('formSubmit') !!} method = "post">
+      <!--- and i'm high on believeing that you're in love with me token-->
+    <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
     <div id="app1">
         <div class="app_heading">
             <h1>
                 Application 
+                <div>
                 
+                </div>
             </h1>
             <p>
                 Personal Information
@@ -66,68 +69,67 @@
                 <label>
                     First Name
                 </label>
-                <!-- Gordon Ramsay < The amount of cuss words after discovering that id is not the same as name-->
-                <input onchange="validateText('first_name');" name = "fn" id="fn" type="text" class="left" autocomplete="off" placeholder="First Name*" required></input>
+                <input name = "fn" onchange="validateText('first_name');" id="first_name" type="text" class="left" autocomplete="off" placeholder="First Name*" required></input>
             </p>
             <p>
                 <label>
                     Last Name
                 </label>
-                <input onchange="validateText('last_name');" name = "ln" id="ln" type="text" class="right" autocomplete="off" placeholder="Last Name*" ></input>
+                <input name = "ln" onchange="validateText('last_name');" id="last_name" type="text" class="right" autocomplete="off" placeholder="Last Name*" required></input>
             </p>
             <p>
                 <label>
                     E-mail
                 </label>
-                <input onchange="validateEmail('email');" name = "email" id="email" type="text" class="left" autocomplete="off" placeholder="E-mail*" ></input>
+                <input name = "email" onchange="validateEmail('email');" id="email" type="text" class="left" autocomplete="off" placeholder="E-mail*" required></input>
             </p>
             <p>
                 <label>
                     Phone Number
                 </label>
-                <input onchange="validatePhone('phone');" name = "phone" id="phone" type="text" class="right" onclick="this.placeholder='(_ _ _) _ _ _ - _ _ _ _';" autocomplete="off" placeholder="Phone Number" ></input>
+                <input name = "phone" onchange="validatePhone('phone');" id="phone" type="text" class="right" onclick="this.placeholder='(_ _ _) _ _ _ - _ _ _ _';" autocomplete="off" placeholder="Phone Number" required></input>
             </p>
             <p>
                 <label>
                     Country
                 </label>
-                <select id="country" name="country" placeholder="Country" ></select>
+                <select id="country" name="country" placeholder="Country" required></select>
             </p>
             <p>
                 <label>
                     State
                 </label>
-                <select id="state" name="state" placeholder="State" ></select>
+                <select id="state" name="state" placeholder="State" required></select>
             </p>
             <p>
                 <label>
                     City
                 </label>
-                <input type="text" onchange="validateText('city');" id="city" name="city" class="left" autocomplete="off" placeholder="City" ></input>
+                <input type="text" onchange="validateText('city');" id="city" name="city" class="left" autocomplete="off" placeholder="City" required></input>
             </p>
             <p>
                 <label>
                     Zip Code
                 </label>
-                <input type="text" name = "zip" class="right" autocomplete="off" placeholder="Zip Code" ></input>
+                <input type="text" name = "zip" class="right" autocomplete="off" placeholder="Zip Code" required></input>
             </p>
             <p>
                 <label>
                     Date of Birth
                 </label>
-                <input onchange="validateDOB('dob');" id="dob" type="text" name ="dob" class="left" autocomplete="off" placeholder="Date of Birth" onclick="this.placeholder='MM/DD/YYYY';" ></input>
+                <input onchange="validateDOB('dob');" id="dob" type="text" name ="dob" class="left" autocomplete="off" placeholder="Date of Birth" onclick="this.placeholder='MM/DD/YYYY';" required></input>
             </p>
             <p>
                 <label>
                     Gender
                 </label>
-                <select name="gender" id="gender" class="right" autocomplete="off" ></select>
+                <select name="gender" id="gender" class="right" autocomplete="off" required></select>
             </p>
             <p id="profile_photo">
                 <label>
-                    Profile Photo
+                    Headshot
                 </label>
-                <input type="file" class="right" id="dp" onchange="validateImage('profile_image');" style="margin-right: 100px; float: left;" name = "dp" autocomplete="off" placeholder="Profile Photo" ></input>
+                <input type="file" class="right" id="profile_image" onchange="validateImage('profile_image');" style="margin-right: 100px; float: left;" name = "dp" autocomplete="off" placeholder="Profile Photo" required></input>
             </p>
         </div>
     
@@ -135,16 +137,13 @@
             <div class="buttons">
                 <button class="next-button">
                     Next
-              </button>
-          </div>
+                </button>
+            </div>
         </div>
-  </div>
- 
+    </div>
     
- 
+                
     
-        
-  
     <!------------------------------------------------------------------------------------------------------------>
 
     <div id="app2">
@@ -191,31 +190,31 @@
                 <label>
                     Talent Category
                 </label>
-                <input type="text" name ="category" id="category" onchange="validateText('talent_category');"  autocomplete="off" placeholder="Talent Category*" required></input>
+                <select id="talent_category"></select>
             </p>
             <p>
                 <label>
                     Specific Talent
                 </label>
-                <input type="text" name ="talent" id="talent" onchange="validateText('specific_talent');"  autocomplete="off" placeholder="Specific Talent" required></input>
+                <input type="text" id="specific_talent" onchange="validateText('specific_talent');"  autocomplete="off" placeholder="Specific Talent" ></input>
             </p>
             <p id="portfolio"  style="padding-bottom: 0px;">
                 <label>
-                    Portfolio
+                    Image
                 </label>
-                <input type="file" name = "portfolio" id="portfolio" onchange="validateImage('portfolio_image');" autocomplete="off" placeholder="Portfolio" required></input>
+                <input type="file" id="portfolio_image" onchange="validateImage('portfolio_image');" autocomplete="off" placeholder="Portfolio" ></input>
             </p>
             <p id="portfolio" style="padding-bottom: 0px;">
                 <label>
                     Audio
                 </label>
-                <input type="file" name= "audio" id="audio" onchange="validateAudio('audio');" autocomplete="off" placeholder="Audio" required></input>
+                <input type="file" id="audio" onchange="validateAudio('audio');" autocomplete="off" placeholder="Audio" ></input>
             </p>
             <p id="portfolio"  style="padding-bottom: 0px;">
                 <label>
                     Video
                 </label>
-                <input type="file" name = "video" id="video" onchange="validateVideo('video');" autocomplete="off" placeholder="Video" required></input>
+                <input type="text" id="video" autocomplete="off" placeholder="Add Link to Video" ></input>
             </p>
         </div>
     
@@ -283,15 +282,15 @@
                 <label>
                     Describe Yourself
                 </label>
-                <textarea name = "desc" id="desc" autocomplete="off" rows="12" placeholder="Describe Yourself (max 1000 characters)*" oninput="countChars();" required></textarea>
+                <textarea id="describe" autocomplete="off" rows="12" placeholder="Describe Yourself (max 1000 characters)*" oninput="countChars();" ></textarea>
             </p>
             <div id="add_links">
                 <p>
                     <label>
                         Personal Web/Social Media
                     </label>
-                    <input type="text"  autocomplete="off" placeholder="Personal Web/Social Media" ></input>
-                    <button onclick="add_link();">Add Links</button>
+                    <input type="text" autocomplete="off" placeholder="Personal Web/Social Media" ></input>
+                    <button class="addlink-button" onclick="add_link();">Add Links</button>
                 </p>
             </div>
             <p>
@@ -370,37 +369,37 @@
                 <label>
                     Opportunities
                 </label>
-                <input type="text" name = "opportunities" id="opportunities" onchange="validateText('opportunities');"  class="left" autocomplete="off" placeholder="Opportunities*" required></input>
+                <select id="opportunities" class="left" ></select>
             </p>
             <p>
                 <label>
                     Representation
                 </label>
-                <input type="text" name = "representation" id="representation" onchange="validateText('representation');"  class="right" autocomplete="off" placeholder="Representation" required></input>
+                <select id="representation" class="right" ></select>
             </p>
             <p>
                 <label>
                     Talent Development
                 </label>
-                <input type="text" name = "talentdev" id="talentdev" onchange="validateText('talent_development');"  class="left" autocomplete="off" placeholder="Talent Development" required></input>
+                <select id="talent_development" class="left" ></select>
             </p>
             <p>
                 <label>
                     General Services
                 </label>
-                <input type="text" name = "genserv" id="genserv" onchange="validateText('general_services');" class="right" autocomplete="off" placeholder="General Services" required></input>
+                <select id="general_services" class="right" ></select>
             </p>
             <p>
                 <label>
                     Vanity & Luxury Services
                 </label>
-                <input type="text" name ="vanityluxury" id="vanityluxury" onchange="validateText('vanity');"  class="left" autocomplete="off" placeholder="Vanity & Luxury Services" required></input>
+                <select id="vanity" class="left" ></select>
             </p>
             <p>
                 <label>
                     Additional Requests
                 </label>
-                <input type="text" name = "additional" id="additional" onchange="validateText('additional');"  class="right" autocomplete="off" placeholder="Additional Requests" required></input>
+                <input type="text" id="additional" onchange="validateText('additional');" class="right" autocomplete="off" placeholder="Additional Requests" ></input>
             </p>
         </div>
     
@@ -410,26 +409,27 @@
                     Previous
                 </button>
            
-   <button class="submit-button" on >
+                <a style="text-decoration: none; color: white;" href="../renas_code/app-thankyou.html"><button class="submit-button">
                     Submit
-                </button>
-             </div>
+                </button></a>
+            </div>
         </div>
     </div>
-       <input type= "submit" value='click here'>
-       
-       </form>
+    
+    </form>
+        
+    
 <!------------------------------------------------------------------------------------------------------------>
-    <footer>
-      <div class="social-media-bar">
-      <ul>
-        <li><a target="_blank" href="https://twitter.com/talentscool"><img src="images/twitter_logo.png" title="Follow us on Twitter!" class="media-icon"></a></li>
-        <li><a target="_blank" href="https://www.facebook.com/talentscool"><img src="images/facebook_logo.png" title="Follow us on Facebook!" class="media-icon"></a></li>
-        <li><a target="_blank" href="https://www.instagram.com/talentscool/"><img src="images/instagram_logo.png" title="Follow us on Instagram!" class="media-icon"></a></li>
-      </ul>
-    </div>
-      <p>Copyright &copy 2016. Talentscool, Inc. All rights reserved. </p>
-    </footer>
+        <footer>
+            <div class="social-media-bar">
+            <ul>
+                <li><a target="_blank" href="https://twitter.com/talentscool"><img src="images/twitter_logo.png" title="Follow us on Twitter!" class="media-icon"></a></li>
+                <li><a target="_blank" href="https://www.facebook.com/talentscool"><img src="images/facebook_logo.png" title="Follow us on Facebook!" class="media-icon"></a></li>
+                <li><a target="_blank" href="https://www.instagram.com/talentscool/"><img src="images/instagram_logo.png" title="Follow us on Instagram!" class="media-icon"></a></li>
+            </ul>
+        </div>
+            <p>Copyright &copy 2016. Talentscool, Inc. All rights reserved. </p>
+        </footer>
 
 </body>
 
@@ -440,3 +440,9 @@
 <script src="js/countries.js"></script>
 <script language="javascript">populateCountries("country", "state");</script>
 <script language="javascript">populateGender();</script>
+<script language="javascript">populateTalentCategory();</script>
+<script language="javascript">populateOpportunities();</script>
+<script language="javascript">populateRepresentation();</script>
+<script language="javascript">populateTalentDevelopment();</script>
+<script language="javascript">populateGeneralServices();</script>
+<script language="javascript">populateVanity();</script>

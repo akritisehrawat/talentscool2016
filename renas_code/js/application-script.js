@@ -102,14 +102,15 @@ function populateTalentCategory() {
 //     talent.options[7] = new Option('Other (Specify Below)','Other');
 }
 
-function clearOptions() {
+/*function clearOptions() {
     var select = document.getElementById("specific_talent");
     var length = select.options.length;
     for (i = 0; i < length; i++) {
       select.options[i] = null;
     }
 }
-
+*/
+/*
 function furtherPopulateTalent() {
     var further = document.getElementById("specific_talent");
     var talent = document.getElementById("talent_category");
@@ -164,8 +165,7 @@ function furtherPopulateTalent() {
         further.options[5] = new Option('Crafting','Crafting');
     }
     
-}
-
+}*/
 /*
 Dance: Hip Hop, Jazz, Ballet, Western, Zumba etc.
 Musician: Songwriter, Vocalist, Pianist, Guitarist etc.
@@ -401,8 +401,11 @@ function readURL(input) {
             var reader = new FileReader();
             
             reader.onload = function (e) {
-                $('#blah').attr('src', e.target.result);
-            }
+                $('#display_image').attr('src', e.target.result);
+				$('#display_image').attr('height', 150);
+				$('#display_image').attr('width', 150);
+				
+            }	
             
             reader.readAsDataURL(input.files[0]);
         }

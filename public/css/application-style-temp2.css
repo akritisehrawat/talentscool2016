@@ -4,12 +4,12 @@ html, body {
     margin: 0 auto; 
 }
 
-body {
-    -moz-transform: scale(1);
-    -webkit-transform: scale(1);
-    -o-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
+.info {
+    -moz-transform: scale(.75);
+    -webkit-transform: scale(.75);
+    -o-transform: scale(.75);
+    -ms-transform: scale(.75);
+    transform: scale(.75);
 }
 
 *{
@@ -103,7 +103,7 @@ body {
 }
 
 .navigation {
-    display: block;
+    display: none;
     padding: 3em;
     font-family: Genius;
     font-size: 1em;
@@ -210,7 +210,8 @@ textarea {
     margin-left: 0px;
     float: left;
     margin-bottom: 1.5em;
-    width: 57.5%;
+    /*width: 57.5%;*/
+    width: 300px;
 }
 
 #add_links input {
@@ -219,9 +220,11 @@ textarea {
 
 
 #add_links button {
+    /*line-height: 1.8em;
+    font-size: 16px;*/
     line-height: 1.8em;
-    font-size: 16px;
-    float: left;
+    font-size: 14px;
+    float: right;
 }
 
 input[type="file"] {
@@ -309,7 +312,8 @@ button {
     border: none;
     line-height: 3em;
     font-size: 18px;
-    width: 15%;
+    /*width: 15%;*/
+    width: 80px;
     font-family: Argh;
     text-transform: lowercase;
 }
@@ -331,7 +335,6 @@ button:onclick, button.active {
     text-shadow: -1px 1px #193047;
     cursor: progress;
 }
-
 .submit-button{
     background-color: #c96464;
 }
@@ -421,6 +424,7 @@ footer{
 }
 
 
+
 /* ----[ 69.9em (1118px and up, computer screen)]---- */
 @media only screen and (min-width: 69.9em){
     #profile_photo label {
@@ -429,6 +433,36 @@ footer{
 }
 
 /* ----[ 69.9em (1118px and below)]---- */
-@media only screen and (min-width: 49.9em) and (max-width: 69.9em){
+@media only screen and (min-width: 45em){
+
+    .info {
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    }
+
+    .navigation {
+        display: block;
+        min-width: 70em;
+    }
+
+    textarea{
+        width: 400px;
+    }
+
+    button{
+        width: 100px;
+    }
+
+    #add_links button {
+    /*line-height: 1.8em;
+    font-size: 16px;*/
+    line-height: 1.8em;
+    font-size: 16px;
+    float: left;
+}
+
 
 }
