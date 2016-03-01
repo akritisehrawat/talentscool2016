@@ -311,13 +311,9 @@ input[type="text"], input[type="file"], select, textarea {
 }
 
 #radioselector{
-<<<<<<< Updated upstream
-    margin-left: -54%;
-    margin-top: 5%;
-=======
+
     /*margin-left: -60%;
     margin-top: 5%;*/
->>>>>>> Stashed changes
 }
 #toolTip{
     font-size: 16px;
@@ -328,24 +324,16 @@ input[type="text"], input[type="file"], select, textarea {
     color: white;
     padding: 4px;
 }
-<<<<<<< Updated upstream
+
 .imgdiv, .auddiv, .viddiv{
     margin-top: -5%;
-=======
-#media{
-    /*margin-top: -10%;*/
->>>>>>> Stashed changes
     float: right;
 }
 .remove-field{
     font-size: 10px;
     float: right;
-<<<<<<< Updated upstream
-    margin-top: -6%;
-    margin-left: 100%;
-=======
+
     /*margin-top: -10%;*/
->>>>>>> Stashed changes
 }
 .add-field{
     font-size: 10px;
