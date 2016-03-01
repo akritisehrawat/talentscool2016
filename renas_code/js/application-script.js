@@ -424,35 +424,68 @@ jQuery(function($) {
 //MB - function for dynamically changing the talent fields
     //hide all in target div
 $("div", "div#talents").hide();
+$("div", "div.media").hide();
+//$("div", "button.remove-field").hide();
 $("div", "div.multi-field-wrapper").hide();
+
+
+
+
+
 $("select#talent_category").change(function(){
         // hide previously shown in target div
     $("div", "div#talents").hide();
         // read id from your select
     var value = $(this).val();
+    var number = value.substring(value.length-1);
         // show rlrment with selected id
     $("div.multi-field-wrapper").show();
     $("div.multi-fields").show();
     $("div.multi-field").show();
     $("div#mediapertalent").show();
-    $("div#radioselector").show();
-    $("div#media").show();
+    $("div.radioselector").show();
+    $("div#media"+number).show();
     
     $("div#"+value).show();
     //also show the media
 
 });
 
-$("div#radioselector").on("change", function() {
+/*
+$("div.radioselector").on("change", function() {
    //alert($('input[name="myRadio"]:checked', '#myForm').val()); 
         // hide previously shown in target div
     $("div","div#media").hide();
         // read id from your select
-    var value = $("input[name='myRadio']:checked", "div#radioselector").val();
+
+    var value = $("input[name='myRadio']:checked", "div.radioselector").val();
+    //alert(value);
        // show rlrment with selected id
     $("div#"+value).show();
 });
+*/
+function displayMediaInput(element){
 
+    //read value, which is the id
+    var value = $(element).val();
+    var number = value.substring(value.length-1);
+
+    $("div.multi-field-wrapper").show();
+    $("div.multi-fields").show();
+    $("div.multi-field").show();
+    $("div#mediapertalent").show();
+    $("div#media"+number).show();
+    $("div#img"+number).hide();
+    $("div#audio"+number).hide();
+    $("div#video"+number).hide();
+    
+
+    $("div#"+value).show();
+
+}
+
+
+/*
 $("input#specific_talent.left")
 .mouseover(function() {
   $("div#toolTip").show();
@@ -460,13 +493,15 @@ $("input#specific_talent.left")
 .mouseout(function() {
   $("div#toolTip").hide();
 });
+*/
 
+/* Creating or removing a media field 
 $('.multi-field-wrapper').each(function() {
     var $wrapper = $('.multi-fields', this);
     var $i = 1;
     var $oldval = "";
     $(".add-field", $(this)).click(function(e) {
-        if (($('.multi-field', $wrapper).length < 3))
+      if (($('.multi-field', $wrapper).length < 3))
         {        
             $i= $i+1;         
             var $mediachild = $('.multi-field:first-child', $wrapper);
@@ -488,8 +523,54 @@ $('.multi-field-wrapper').each(function() {
             $(this).parent('.multi-field').remove();
     });
 });
+*/
+
+var $mediaCounter = 0;
+$('.multi-field-wrapper').each(function() {
+    var $wrapper = $('.multi-fields', this);
+    var $i=1;
+    $(".add-field", $(this)).click(function(e) {
+        if($mediaCounter ==0){
+            $("div.multi-field-wrapper").show();
+             $("div.multi-fields").show();
+            $("div.multi-field").show();
+            $("div#mediapertalent").show();
+            $("div.radioselector").show();
+
+            $mediaCounter++;
+
+            
+        }
+        else if($mediaCounter >0 && $mediaCounter < 3){
+            $i= $i+1;         
+            var $mediachild = $('.multi-field:first-child', $wrapper);
+         //   alert('img='+$mediachild.find('.imgdiv').val()+' vid='+$mediachild.find('.vidtype').val()+' aud='+$mediachild.find('.audtype').val());
+         
+            $mediachild.clone(true).appendTo($wrapper);
+            $mediachild.find('.imgtype').val('img'+$i);
+            $mediachild.find('.imgdiv').attr('id','img'+$i);
+            $mediachild.find('.imgtype').attr('name','myRadio'+$i);
+            $mediachild.find('.audtype').val('audio'+$i);
+            $mediachild.find('.auddiv').attr('id','audio'+$i);
+            $mediachild.find('.audtype').attr('name','myRadio'+$i);
+            $mediachild.find('.vidtype').val('video'+$i);
+            $mediachild.find('.viddiv').attr('id','video'+$i);
+            $mediachild.find('.vidtype').attr('name','myRadio'+$i);
+
+            $mediachild.find('.media').attr('id', 'media'+$i);
 
 
+            $mediaCounter++;
+
+
+        }
+        
+    });
+    $('.multi-field .remove-field', $wrapper).click(function() {
+        if ($('.multi-field', $wrapper).length > 1)
+            $(this).parent('.multi-field').remove();
+    });
+});
 
 
 
