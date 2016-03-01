@@ -236,7 +236,43 @@ input:required:before {
     width: 40%;
     margin: 0 auto;
 }
+.app2_wrapper .left-column{
+    float: left;
+}
 
+.app2_wrapper .right-column{
+    float: right;
+}
+.app2_wrapper .top-field{
+    padding-top: 1.8em;
+}
+
+.app2_wrapper .right-section{
+    float: right;
+}
+#app2 .info{
+    text-align: left;
+}
+.invisible{
+    display: none;
+}
+.visible{
+    display: block;
+}
+
+/* clear float */
+    .clearfix:before,
+    .clearfix:after{
+        content:" ";
+        display: table;
+    }
+    .clearfix:after{
+        clear:both;
+    }
+    .clearfix{
+        *zoom:1;
+    }
+/* end clearfix */
 
 .app3_wrapper {
     width: 65%;
@@ -262,21 +298,26 @@ input[type="text"], input[type="file"], select, textarea {
     width: 212px;
 }
 .talent{
-    margin-top: -20%;
-    margin-left: 35%;
+    /*margin-top: -20%;
+    margin-left: 35%;*/
 }
 
 #talent_category, #specific_talent {
-    float: left;
+    /*float: left;*/
 }
 
 #industry{
-    margin-right: 100%;
+    /*margin-right: 100%;*/
 }
 
 #radioselector{
+<<<<<<< Updated upstream
     margin-left: -54%;
     margin-top: 5%;
+=======
+    /*margin-left: -60%;
+    margin-top: 5%;*/
+>>>>>>> Stashed changes
 }
 #toolTip{
     font-size: 16px;
@@ -287,15 +328,24 @@ input[type="text"], input[type="file"], select, textarea {
     color: white;
     padding: 4px;
 }
+<<<<<<< Updated upstream
 .imgdiv, .auddiv, .viddiv{
     margin-top: -5%;
+=======
+#media{
+    /*margin-top: -10%;*/
+>>>>>>> Stashed changes
     float: right;
 }
 .remove-field{
     font-size: 10px;
     float: right;
+<<<<<<< Updated upstream
     margin-top: -6%;
     margin-left: 100%;
+=======
+    /*margin-top: -10%;*/
+>>>>>>> Stashed changes
 }
 .add-field{
     font-size: 10px;

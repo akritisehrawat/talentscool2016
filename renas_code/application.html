@@ -195,6 +195,7 @@
     
         <div class="info"> 
             <div class="app2_wrapper">
+<<<<<<< Updated upstream
                     <div id = "industry">
                         <p id="portfolio" style="padding-bottom: 0px;">
                             <label>Industry</label>
@@ -302,6 +303,69 @@
 			</div><!-- for buttons -->
 		</div> <!-- for buttons_container-->
 	</div><!-- for app2 -->
+=======
+                <div class="talent-module"> <!-- Replicate this div (and contents) to create another talent form -->
+                    <div class="top-field clearfix">
+                        <div class="left-column">
+                            <label>
+                                Industry 
+                            </label>
+                            <select id="talent_category" name="talent_category" required onchange="furtherPopulateTalent();"></select>
+                        </div>
+                        <div class="right-column">
+                            <input id="specific_talent" type="text" class="left" autocomplete="off" placeholder="" required></input>
+                        </div>
+                    </div>
+                    <p>Media Upload</p>
+                    <div class="multi-field-wrapper">
+                         <div class="multi-fields">
+                            <div class="multi-field">
+                                <div id = "mediapertalent" class="clearfix">
+                                    <!--- image, audio, video-->
+                                    <div class ="radioselector">
+                                        
+                                            <input type="radio" class ="imgtype" name="myRadio1" value="img1" onclick="displayMediaInput(this);"/>Image
+                                            <input type="radio" class ="audtype" name="myRadio1" value="audio1" onclick="displayMediaInput(this);"/>Audio
+                                            <input type="radio" class ="vidtype" name="myRadio1" value="video1" onclick="displayMediaInput(this);"/>Video <br><br>
+                                        
+                                    </div>
+                                    <div class="media" id="media1"> <!-- media input, show and hide depending on radio buttons -->
+                                        <div class="imgdiv" id="img1">
+                                            <input type="file" id="portfolio_image" onchange="validateImage('portfolio_image');" autocomplete="off" placeholder="Portfolio" required></input>
+                                        </div>
+                                        <div class ="auddiv" id="audio1">
+                                            <input type="text" id="audio" autocomplete="off" placeholder="Add Link to Audio" required></input> 
+                                        </div>
+                                        <div class = "viddiv" id="video1">
+                                            <input type="text" id="video" autocomplete="off" placeholder="Add Link to Video" required></input>
+                                        </div>
+                                    </div>
+                                     <button type="button" class="remove-field">Remove</button>
+                                </div> <!--* end mediapertalent *-->
+                               
+                            </div> <!--* end multi-field *-->
+                        </div> <!--* end multi-fields *-->
+                        <button type="button" class="add-field">Add media</button>
+                    </div> <!--* end multi-field-wrapper *-->
+                </div> <!--* end talent-module div *-->
+                
+            
+            </div>
+        </div>
+    
+        <div class="buttons_container">
+            <div class="buttons">
+                <button class="prev-button">
+                    Previous
+                </button>
+                <button class="next-button">
+                    Next
+                </button>
+            </div>
+        </div>
+
+    </div>
+>>>>>>> Stashed changes
 
     <!------------------------------------------------------------------------------------------------------------>
 
