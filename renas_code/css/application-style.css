@@ -301,7 +301,7 @@ input[type="text"], input[type="file"], select, textarea {
     /*margin-top: -20%;
     margin-left: 35%;*/
 }
-
+.
 #talent_category, #specific_talent {
     /*float: left;*/
 }
@@ -339,6 +339,11 @@ input[type="text"], input[type="file"], select, textarea {
     font-size: 10px;
     float:left;
     margin-left:3%;
+}
+.add-talent{
+font-size: 10px;
+margin-left: -15%;
+margin-top: 8%;
 }
 textarea {
     margin-left: 0px;

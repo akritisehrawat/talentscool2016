@@ -425,164 +425,72 @@ jQuery(function($) {
     });
 });
 //MB - function for dynamically changing the talent fields
-    //hide all in target div
-$("div", "div#talents").hide();
-$("div", "div.media").hide();
-//$("div", "button.remove-field").hide();
-$("div", "div.multi-field-wrapper").hide();
-
-
-
-
-
+ var uniqueId = 2;
+ $('#talents').children().hide();
 $("select#talent_category").change(function(){
-        // hide previously shown in target div
-    $("div", "div#talents").hide();
-        // read id from your select
-    var value = $(this).val();
-    var number = value.substring(value.length-1);
-        // show rlrment with selected id
-    $("div.multi-field-wrapper").show();
-    $("div.multi-fields").show();
-    $("div.multi-field").show();
-    $("div#mediapertalent").show();
-    $("div.radioselector").show();
-    $("div#media"+number).show();
-    
-    $("div#"+value).show();
-    //also show the media
-
-});
-
-/*
-$("div.radioselector").on("change", function() {
-   //alert($('input[name="myRadio"]:checked', '#myForm').val()); 
-        // hide previously shown in target div
-    $("div","div#media").hide();
-        // read id from your select
-
-    var value = $("input[name='myRadio']:checked", "div.radioselector").val();
-    //alert(value);
-       // show rlrment with selected id
-    $("div#"+value).show();
-});
-*/
-function displayMediaInput(element){
-
-    //read value, which is the id
-    var value = $(element).val();
-    var number = value.substring(value.length-1);
-
-    $("div.multi-field-wrapper").show();
-    $("div.multi-fields").show();
-    $("div.multi-field").show();
-    $("div#mediapertalent").show();
-    $("div#media"+number).show();
-    $("div#img"+number).hide();
-    $("div#audio"+number).hide();
-    $("div#video"+number).hide();
-    
-
-    $("div#"+value).show();
-
-}
-
-
-/*
-$("input#specific_talent.left")
-.mouseover(function() {
-  $("div#toolTip").show();
-})
-.mouseout(function() {
-  $("div#toolTip").hide();
-});
-*/
-
-/* Creating or removing a media field 
-$('.multi-field-wrapper').each(function() {
-    var $wrapper = $('.multi-fields', this);
-    var $i = 1;
-    var $oldval = "";
-    $(".add-field", $(this)).click(function(e) {
-      if (($('.multi-field', $wrapper).length < 3))
-        {        
-            $i= $i+1;         
-            var $mediachild = $('.multi-field:first-child', $wrapper);
-         //   alert('img='+$mediachild.find('.imgdiv').val()+' vid='+$mediachild.find('.vidtype').val()+' aud='+$mediachild.find('.audtype').val());
-            $mediachild.clone(true).appendTo($wrapper);
-            $mediachild.find('.imgtype').val('img'+$i);
-            $mediachild.find('.imgdiv').attr('id','img'+$i);
-            $mediachild.find('.audtype').val('audio'+$i);
-            $mediachild.find('.auddiv').attr('id','audio'+$i);
-            $mediachild.find('.vidtype').val('video'+$i);
-            $mediachild.find('.viddiv').attr('id','video'+$i);
-            
-            
-        } 
-        
-    });
-    $('.multi-field .remove-field', $wrapper).click(function() {
-        if ($('.multi-field', $wrapper).length > 1)
-            $(this).parent('.multi-field').remove();
+  listId = $(this).val();
+  var listChildren = $(this).parent().siblings('#talents').children();
+  
+  $(listChildren).each(function(){
+  
+    var childId = $(this).attr("id");
+    if(childId == listId)
+    {
+      //alert(childId);
+      var thisChild = $(this).parent().children('#'+childId);
+      thisChild.show();
+      thisChild.siblings().hide();
+      thisChild.siblings('.addRow').show();
+      thisChild.siblings('.media').show();
+    }
+    //alert(id);
     });
 });
-*/
-
-var $mediaCounter = 0;
-$('.multi-field-wrapper').each(function() {
-    var $wrapper = $('.multi-fields', this);
-    var $i=1;
-    $(".add-field", $(this)).click(function(e) {
-        if($mediaCounter ==0){
-            $("div.multi-field-wrapper").show();
-             $("div.multi-fields").show();
-            $("div.multi-field").show();
-            $("div#mediapertalent").show();
-            $("div.radioselector").show();
-
-            $mediaCounter++;
-
-            
-        }
-        else if($mediaCounter >0 && $mediaCounter < 3){
-            $i= $i+1;         
-            var $mediachild = $('.multi-field:first-child', $wrapper);
-         //   alert('img='+$mediachild.find('.imgdiv').val()+' vid='+$mediachild.find('.vidtype').val()+' aud='+$mediachild.find('.audtype').val());
+ $('.removeRow').click(function() {
+    $(this).parent().hide();
+    $(this).parent().attr('class', 'hidden');
+ });
+ $('.addRow').click(function() {
+    var m2 = $(this).siblings('.media').children('#media2');
+    var m3 = $(this).siblings('.media').children('#media3');
+    var m2class = m2.attr('class');
+    var m3class = m3.attr('class');
+    //4 cases
+    //case1 : media 2 and media 3 are both hidden, display m2
+     if(m2class == 'hidden' && m3class == 'hidden')
+     {
+        m2.show();
+        m2.attr('class','visible');
+     }
+    //case 2: media 2 is hidden, media 3 is visible, display m2
+     if(m2class =='hidden' && m3class == 'visible')
+     {
+        m2.show();
+        m2.attr('class','visible');
+     }
+     //case 3: media 2 is visible, media 3 is hidden, display m2
+     if(m2class == 'visible' && m3class == 'hidden')
+     {
+       m3.show();
+       m3.attr('class','visible');
+     }
+     //case 4: media 2 is visible, media 3 is visible, do nothing
+    
+ });
+$(function() {
+     $('.addTalent').click(function() {
+         var copy = $("#talent-container").clone(true);
+         var formId = 'talent-container' + uniqueId;
+         copy.attr('id', formId );
          
-            $mediachild.clone(true).appendTo($wrapper);
-            $mediachild.find('.imgtype').val('img'+$i);
-            $mediachild.find('.imgdiv').attr('id','img'+$i);
-            $mediachild.find('.imgtype').attr('name','myRadio'+$i);
-            $mediachild.find('.audtype').val('audio'+$i);
-            $mediachild.find('.auddiv').attr('id','audio'+$i);
-            $mediachild.find('.audtype').attr('name','myRadio'+$i);
-            $mediachild.find('.vidtype').val('video'+$i);
-            $mediachild.find('.viddiv').attr('id','video'+$i);
-            $mediachild.find('.vidtype').attr('name','myRadio'+$i);
-
-            $mediachild.find('.media').attr('id', 'media'+$i);
-
-
-            $mediaCounter++;
-
-
-        }
-        
-    });
-    $('.multi-field .remove-field', $wrapper).click(function() {
-        if ($('.multi-field', $wrapper).length > 1)
-            $(this).parent('.multi-field').remove();
-    });
+         $('#container').append(copy);
+         $('#' + formId).find('.media:last-child').each(function(){
+         var $temp = $('.media:last-child').attr('id');
+         alert($temp);
+        // uniqueId = parseInt($tempMedia[$tempMedia.length-1])+1;
+            $(this).attr('id', $(this).attr('id') + uniqueId); 
+             
+         });
+         uniqueId++;  
+     });
 });
-
-
-
-
-
-
-
-
-
-
-
-
